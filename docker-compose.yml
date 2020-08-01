@@ -1,0 +1,93 @@
+version: '3.6'
+services:
+  node:
+    build: docker/nodejs
+    links:
+      - redis
+    environment:
+      - REDIS_URL=redis://cache
+    depends_on:
+      - php-fpm
+    volumes:
+      - "./:/www"
+    networks:
+      - board
+    ports:
+      - "8205:3000"
+  php-fpm:
+    build: docker/php-fpm
+    depends_on:
+      - db
+      - redis
+    links:
+      - redis
+      - db
+    volumes:
+      - "./:/www"
+    environment:
+      - DOCKER_PHP_CONFIG=${DOCKER_PHP_CONFIG}
+      - DOCKER_XDEBUG=${DOCKER_XDEBUG}
+      - DOCKER_SUPERVISOR=${DOCKER_SUPERVISOR}
+      - DOCKER_CRON=${DOCKER_CRON}
+    networks:
+        - board
+
+  nginx:
+    image: nginx:1.16-alpine
+    depends_on:
+      - php-fpm
+    ports:
+      - "8200:80"
+      - "8243:443"
+    volumes:
+      - "./:/www"
+      - "./docker/nginx/conf.d:/etc/nginx/conf.d"
+    networks:
+      - board
+
+  db:
+    image: postgres:12-alpine
+    volumes:
+      - ./docker/postgres/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${DOCKER_DATABASE}
+      - POSTGRES_USER=${DOCKER_USERNAME}
+      - POSTGRES_PASSWORD=${DOCKER_PASSWORD}
+    ports:
+      - "8201:5432"
+    networks:
+      - board
+
+  test-db:
+    image: postgres:12-alpine
+    volumes:
+      - ./docker/postgres/postgres-test:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${DOCKER_DATABASE_TEST}
+      - POSTGRES_USER=${DOCKER_USERNAME}
+      - POSTGRES_PASSWORD=${DOCKER_PASSWORD}
+    ports:
+      - "8202:5432"
+    networks:
+      - board
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - "8203:8025"
+    depends_on:
+      - php-fpm
+    networks:
+      - board
+  redis:
+    image: redis
+    volumes:
+      - ./docker/redis:/data
+    ports:
+      - "8204:6379"
+    networks:
+      - board
+
+networks:
+  board:
+    driver: bridge
