@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +11,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/verify/{token}', 'Auth\RegisterController@verify')->name('register.verify');
+
+Route::get('/cabinet', 'Cabinet\HomeController@index')->name('cabinet');

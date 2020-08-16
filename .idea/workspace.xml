@@ -26,29 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/admin/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env laravel/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env laravel/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env laravel/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env laravel/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env laravel/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel_socket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_socket.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Mail/Auth/VerifyMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Mail/Auth/VerifyMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +37,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/app" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -230,8 +208,23 @@
       <workItem from="1596288932242" duration="227000" />
       <workItem from="1596289198956" duration="1370000" />
       <workItem from="1596306699657" duration="727000" />
-      <workItem from="1597599715387" duration="3181000" />
+      <workItem from="1597599715387" duration="3575000" />
     </task>
+    <task id="LOCAL-00001" summary="add entities">
+      <created>1597602930031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597602930031</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add redact gitignore">
+      <created>1597603007992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597603007992</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,18 +260,31 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add entities" />
+    <MESSAGE value="add redact gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add redact gitignore" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1597599927846">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597599927846" />
+    <state x="2495" y="67" key="CommitChangelistDialog2" timestamp="1597603007906">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2495" y="67" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597603007906" />
     <state x="2667" y="265" key="FileChooserDialogImpl" timestamp="1596289156681">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2667" y="265" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1596289156681" />
-    <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597602839033">
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1597603009950">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597602839033" />
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597603009950" />
+    <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597603291268">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597603291268" />
   </component>
 </project>
