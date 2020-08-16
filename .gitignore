@@ -1,3 +1,5 @@
 .env
 xxx.txt
 /docker/postgres
+.idea
+.git
