@@ -9,7 +9,6 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/app/vendor/cweagans/composer-patches" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/davejamesmiller/laravel-breadcrumbs" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/inflector" />
@@ -17,7 +16,6 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
-      <excludeFolder url="file://$MODULE_DIR$/app/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facade/ignition-contracts" />
@@ -29,11 +27,10 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/hamcrest/hamcrest-php" />
-      <excludeFolder url="file://$MODULE_DIR$/app/vendor/jakub-onderka/php-console-color" />
-      <excludeFolder url="file://$MODULE_DIR$/app/vendor/jakub-onderka/php-console-highlighter" />
-      <excludeFolder url="file://$MODULE_DIR$/app/vendor/kylekatarnls/update-helper" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/installer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravelcollective/html" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/mime-type-detection" />

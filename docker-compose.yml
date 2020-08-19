@@ -24,6 +24,8 @@ services:
       - db
     volumes:
       - "./:/www"
+
+
     environment:
       - DOCKER_PHP_CONFIG=${DOCKER_PHP_CONFIG}
       - DOCKER_XDEBUG=${DOCKER_XDEBUG}

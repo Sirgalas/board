@@ -49,7 +49,6 @@ vendor: # composer install
 testing: # composer install
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm vendor/bin/phpunit
 
-
 key: # gen application key
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan key:generate
 
@@ -59,11 +58,17 @@ fresh: # refresh the database and run all database seeds
 composer_dump: # composer dump-autoload
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm composer dump-autoload
 
+composer_update: # composer dump-autoload
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm composer update
+
 test: # run all tests
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php vendor/bin/phpunit
 
 create_controller: # create controller name=[controllerName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:controller $(name)
+
+create_crud: # create controller name=[controllerName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:controller $(name) --resource
 
 create_model: # create model name=[modelName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:model Models/$(name) -m
@@ -73,3 +78,9 @@ create_seeder: # create seeder name=[seederName]
 
 create_test: # create seeder name=[seederName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:test $(name)
+
+create_request: # create request name=[seederName]
+    	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:request $(name)
+
+ide_helpers: # create ide helpers
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan ide-helper:$(name)
