@@ -73,14 +73,23 @@ create_crud: # create controller name=[controllerName]
 create_model: # create model name=[modelName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:model Models/$(name) -m
 
-create_seeder: # create seeder name=[seederName]
+create_seeder: # create migration name=[seederName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:seeder $(name)TableSeeder
 
-create_test: # create seeder name=[seederName]
-	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:test $(name)
+create_migration: # create seeder name=[seederName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:migration $(name)
+
+create_test: # create test name=[testName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:test $(name)Test
+
+create_unit_test: # create test unit name=[seederName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:test $(name)Test --unit
 
 create_request: # create request name=[seederName]
-    	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:request $(name)
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:request $(name)Request
+
+create_command: # create command name=[seederName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:command $(name)Command
 
 ide_helpers: # create ide helpers
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan ide-helper:$(name)

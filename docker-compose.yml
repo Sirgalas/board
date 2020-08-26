@@ -14,6 +14,7 @@ services:
       - board
     ports:
       - "8205:3000"
+
   php-fpm:
     build: docker/php-fpm
     depends_on:
@@ -24,8 +25,6 @@ services:
       - db
     volumes:
       - "./:/www"
-
-
     environment:
       - DOCKER_PHP_CONFIG=${DOCKER_PHP_CONFIG}
       - DOCKER_XDEBUG=${DOCKER_XDEBUG}
