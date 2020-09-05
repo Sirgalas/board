@@ -58,7 +58,6 @@ services:
       - "8201:5432"
     networks:
       - board
-
   test-db:
     image: postgres:12-alpine
     volumes:

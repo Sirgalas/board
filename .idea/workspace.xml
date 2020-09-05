@@ -27,23 +27,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Attribute.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/Adverts/AttributeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel_socket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_socket.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/PhoneController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Cabinet/UpdateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_09_01_201337_create_atributes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_09_05_200357_add_user_last_name.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_09_05_203715_add_user_phone.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/profile/_nav.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/profile/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/profile/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/profile/phone.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/Feature/LoginTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/Feature/RegisterTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/Adverts/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/Adverts/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/Adverts/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Requests/Admin/Adverts/Attribute/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Requests/Admin/Adverts/Attribute/CreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Requests/Admin/Adverts/Attribute/UpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Requests/Admin/Adverts/Attribute/UpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/regions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/regions/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/auth/forgot.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/auth/login.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/admin/regions/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/regions/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/regions/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/regions/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/users/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/admin/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/breadcrumbs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tests/Unit/Entity/User/PermissionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/tests/Unit/Entity/User/PermissionTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tests/Unit/Entity/User/RoleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/tests/Unit/Entity/User/RoleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +73,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/app" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -212,14 +229,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/resources/views/cabinet/profile" />
+      <recent name="$PROJECT_DIR$/app/resources/views/admin/layouts" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/resources/lang/ru" />
       <recent name="$PROJECT_DIR$/app/resources/views" />
       <recent name="$PROJECT_DIR$/app/app/Http/Controllers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/resources/views/admin/layouts" />
-      <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
   <component name="RunManager">
@@ -279,7 +297,11 @@
       <workItem from="1598895618291" duration="6244000" />
       <workItem from="1598939353781" duration="3911000" />
       <workItem from="1598988564337" duration="4593000" />
-      <workItem from="1599023703932" duration="6079000" />
+      <workItem from="1599023703932" duration="6175000" />
+      <workItem from="1599074470286" duration="604000" />
+      <workItem from="1599112007169" duration="6294000" />
+      <workItem from="1599160964113" duration="2600000" />
+      <workItem from="1599330959232" duration="9300000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -309,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598463046037</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="redact blades adn attributes">
+      <created>1599029903462</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599029903462</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +380,8 @@
     <MESSAGE value="add redact gitignore" />
     <MESSAGE value="add user cruds" />
     <MESSAGE value="add user rules and permission" />
-    <option name="LAST_COMMIT_MESSAGE" value="add user rules and permission" />
+    <MESSAGE value="redact blades adn attributes" />
+    <option name="LAST_COMMIT_MESSAGE" value="redact blades adn attributes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2467" y="165" key="#CLI_Interpreters" timestamp="1597865275350">
@@ -366,10 +396,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2344" y="0" width="752" height="1026" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598991412217" />
-    <state x="2617" y="265" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598506540744">
+    <state x="2617" y="265" width="526" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599115116787">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2617" y="265" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598506540744" />
+    <state x="2617" y="265" width="526" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599115116787" />
     <state x="2602" y="344" width="556" height="337" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1597865474497">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -378,19 +408,19 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598732148295" />
-    <state x="2495" y="67" key="CommitChangelistDialog2" timestamp="1598463045244">
+    <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2" timestamp="1599029902542">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2495" y="67" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598463045244" />
+    <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599029902542" />
     <state x="2725" y="407" key="DockerComposeFileDialog" timestamp="1597643830689">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2725" y="407" key="DockerComposeFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597643830689" />
-    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl" timestamp="1598942426282">
+    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl" timestamp="1599161796956">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="252" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1598594779819" />
-    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598942426282" />
+    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599161796956" />
     <state width="1291" height="455" key="GridCell.Tab.0.bottom" timestamp="1598560608369">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -411,18 +441,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="3042" y="194" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598991175429" />
-    <state x="2704" y="433" key="NewPhpFileDialog" timestamp="1598992186374">
+    <state x="2704" y="433" key="NewPhpFileDialog" timestamp="1599339034966">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2704" y="433" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598992186374" />
+    <state x="2704" y="433" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599339034966" />
     <state x="2388" y="142" key="SettingsEditor" timestamp="1598383887123">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2388" y="142" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598383887123" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1598463048244">
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1599029905058">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598463048244" />
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599029905058" />
     <state x="2740" y="420" key="WebDeployment.AddServerDialog.v.1" timestamp="1597865371456">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -435,9 +465,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597603717067" />
-    <state x="2549" y="226" key="search.everywhere.popup" timestamp="1598301391961">
+    <state x="2549" y="226" key="search.everywhere.popup" timestamp="1599163319396">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2549" y="226" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598301391961" />
+    <state x="2549" y="226" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599163319396" />
   </component>
 </project>
