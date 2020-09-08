@@ -27,12 +27,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/tests/Unit/Entity/User/PhoneTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Services/Sms/SmsRu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Services/Sms/SmsSender.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Requests/Cabinet/UpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Requests/Cabinet/UpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/PhoneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/PhoneController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +180,7 @@
       <path value="$PROJECT_DIR$/app/vendor/laravelcollective/html" />
       <path value="$PROJECT_DIR$/app/vendor/davejamesmiller/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/app/vendor/kalnoy/nestedset" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fV2RRPM84VKLR7a3vItoPK0OsT" />
@@ -189,7 +192,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/var/www/rosinfra.lc" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -274,7 +277,8 @@
       <workItem from="1599112007169" duration="6294000" />
       <workItem from="1599160964113" duration="2600000" />
       <workItem from="1599330959232" duration="9333000" />
-      <workItem from="1599501321504" duration="5742000" />
+      <workItem from="1599501321504" duration="6046000" />
+      <workItem from="1599542781226" duration="4795000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -318,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599341444010</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add phones">
+      <created>1599508970329</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599508970329</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +373,8 @@
     <MESSAGE value="add user rules and permission" />
     <MESSAGE value="redact blades adn attributes" />
     <MESSAGE value="redact form blades" />
-    <option name="LAST_COMMIT_MESSAGE" value="redact form blades" />
+    <MESSAGE value="add phones" />
+    <option name="LAST_COMMIT_MESSAGE" value="add phones" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2467" y="165" key="#CLI_Interpreters" timestamp="1597865275350">
@@ -389,39 +401,40 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598732148295" />
-    <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2" timestamp="1599341443501">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="575" y="64" width="769" height="891" key="CommitChangelistDialog2" timestamp="1599508969569">
+      <screen x="0" y="0" width="1920" height="1026" />
     </state>
+    <state x="575" y="64" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508969569" />
     <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599341443501" />
     <state x="2725" y="407" key="DockerComposeFileDialog" timestamp="1597643830689">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2725" y="407" key="DockerComposeFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597643830689" />
-    <state x="747" y="252" width="426" height="496" key="FileChooserDialogImpl" timestamp="1599508262021">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl" timestamp="1599546281920">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="252" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508262021" />
-    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599161796956" />
-    <state width="1291" height="455" key="GridCell.Tab.0.bottom" timestamp="1598560608369">
+    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599546281920" />
+    <state width="1291" height="455" key="GridCell.Tab.0.bottom" timestamp="1599544906985">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1291" height="455" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598560608369" />
-    <state width="1291" height="455" key="GridCell.Tab.0.center" timestamp="1598560608369">
+    <state width="1291" height="455" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599544906985" />
+    <state width="1291" height="455" key="GridCell.Tab.0.center" timestamp="1599544906985">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1291" height="455" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598560608369" />
-    <state width="1291" height="455" key="GridCell.Tab.0.left" timestamp="1598560608369">
+    <state width="1291" height="455" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599544906985" />
+    <state width="1291" height="455" key="GridCell.Tab.0.left" timestamp="1599544906985">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1291" height="455" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598560608369" />
-    <state width="1291" height="455" key="GridCell.Tab.0.right" timestamp="1598560608369">
+    <state width="1291" height="455" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599544906985" />
+    <state width="1291" height="455" key="GridCell.Tab.0.right" timestamp="1599544906985">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1291" height="455" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598560608369" />
-    <state x="3042" y="194" key="NewPhpClassDialog" timestamp="1598991175429">
+    <state width="1291" height="455" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599544906985" />
+    <state x="3042" y="194" key="NewPhpClassDialog" timestamp="1599548634434">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3042" y="194" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598991175429" />
+    <state x="3042" y="194" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599548634434" />
     <state x="2704" y="433" key="NewPhpFileDialog" timestamp="1599339034966">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -431,9 +444,10 @@
     </state>
     <state x="468" y="135" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508283576" />
     <state x="2388" y="142" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598383887123" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1599341446603">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="559" y="231" key="Vcs.Push.Dialog.v2" timestamp="1599509022409">
+      <screen x="0" y="0" width="1920" height="1026" />
     </state>
+    <state x="559" y="231" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599509022409" />
     <state x="2479" y="243" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599341446603" />
     <state x="2740" y="420" key="WebDeployment.AddServerDialog.v.1" timestamp="1597865371456">
       <screen x="1920" y="0" width="1920" height="1080" />
