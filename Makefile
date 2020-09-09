@@ -46,8 +46,8 @@ init: # laravel install
 vendor: # composer install
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm composer install
 
-testing: # composer install
-	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm vendor/bin/phpunit
+migrate: # composer install
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan migrate
 
 key: # gen application key
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan key:generate
