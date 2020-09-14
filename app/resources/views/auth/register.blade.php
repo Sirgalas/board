@@ -14,15 +14,25 @@
                 <div class="card-header">Register</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                    {{Form::open(['route'=>('register')])}}
+                        {{Form::token()}}
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Имя</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
+                                {{
+                                    Form::text(
+                                        'name',
+                                        old('name'),
+                                        [
+                                            'class'=>$errors->has('name')?"form-control is_invalid":"form-control",
+                                            'placeholder'=>"Имя*",
+                                            "id"=>"name",
+                                            'required'=>true
+                                        ]
+                                    )
+                                }}
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -35,8 +45,18 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
+                                {{
+                                    Form::text(
+                                        'email',
+                                        old('email'),
+                                        [
+                                            'class'=>$errors->has('email')?"form-control is_invalid":"form-control",
+                                            'placeholder'=>"email*",
+                                            "id"=>"email",
+                                            'required'=>true
+                                        ]
+                                    )
+                                }}
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -49,7 +69,17 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                {{
+                                    Form::password(
+                                        'password',
+                                        [
+                                            'class'=>$errors->has('password')?"form-control is_invalid":"form-control",
+                                            'placeholder'=>"Пароль*",
+                                            "id"=>"password",
+                                            'required'=>true
+                                        ]
+                                    )
+                                }}
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
@@ -63,7 +93,18 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                {{
+                                    Form::password(
+                                        'password_confirmation',
+                                        [
+                                            'class'=>$errors->has('password_confirmation')?"form-control is_invalid":"form-control",
+                                            'placeholder'=>"Повторите пароль*",
+                                            "id"=>"password_confirm",
+                                            'required'=>true
+                                        ]
+                                    )
+                                }}
+                                <input id="password-confirm" type="password" class="form-control" name="" required>
                             </div>
                         </div>
 
@@ -74,7 +115,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    {{Form::close()}}
                 </div>
             </div>
         </div>
