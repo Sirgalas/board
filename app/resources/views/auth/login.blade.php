@@ -14,14 +14,25 @@
                 <div class="card-header">Login</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                    {{Form::open(['route'=>('login')])}}
+                        {{Form::token()}}
 
                         <div class="form-group row">
                             <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                {{
+                                    Form::email(
+                                        'email',
+                                        old('email'),
+                                        [
+                                            'class'=>$errors->has('email')?"form-control is_invalid":"form-control",
+                                            'placeholder'=>"Email*",
+                                            "id"=>"email",
+                                            'required'=>true
+                                        ]
+                                    )
+                                }}
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
@@ -35,8 +46,17 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
+                                {{
+                                    Form::password(
+                                        'password',
+                                        [
+                                            'class'=>$errors->has('password')?"form-control is_invalid":"form-control",
+                                            'placeholder'=>"Пароль*",
+                                            "id"=>"password",
+                                            'required'=>true
+                                        ]
+                                    )
+                                }}
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -66,7 +86,7 @@
                                 </a>
                             </div>
                         </div>
-                    </form>
+                    {{Form::close()}}
                 </div>
             </div>
         </div>

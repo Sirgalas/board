@@ -4,6 +4,13 @@ namespace App\Http\Requests\Auth;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class RegisterRequest
+ * @package App\Http\Requests\Auth
+ * @property string $name
+ * @property string $email
+ * @property string $password
+ */
 class RegisterRequest extends FormRequest
 {
     public function authorize(): bool

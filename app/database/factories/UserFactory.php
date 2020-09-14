@@ -2,7 +2,8 @@
 
 use App\Entity\User;
 use Faker\Generator as Faker;
-
+use Illuminate\Support\Str;
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -17,11 +18,21 @@ use Faker\Generator as Faker;
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 $factory->define(User::class, function (Faker $faker) {
+    $active = $faker->boolean;
+    $phoneActive=$faker->boolean;
     return [
         'name' => $faker->name,
+        'last_name' => $faker->lastName,
         'email' => $faker->unique()->safeEmail,
         'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-        'remember_token' => str_random(10),
-        'status' => User::STATUS_ACTIVE,
+        'remember_token' => Str::random(10),
+        'verify_token' => $active ? null : Str::uuid(),
+        'status' => $active ? User::STATUS_ACTIVE : User::STATUS_WAIT,
+        'role'=>User::ROLE_USER,
+        'permission'=>User::PERMISSION_USER,
+        'phone' => $faker->unique()->phoneNumber,
+        'phone_verified' => $phoneActive,
+        'phone_verify_token' => $phoneActive ? null : Str::uuid(),
+        'phone_verify_token_expire' => $phoneActive ? null : Carbon::now()->addSeconds(300),
     ];
 });

@@ -9,12 +9,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
+use App\UseCases\Auth\RegisterService;
 
 class RegisterController extends Controller
 {
-    public function __construct()
+    private $service;
+
+    public function __construct(RegisterService $service)
     {
         $this->middleware('guest');
+        $this->service=$service;
     }
 
     public function showRegistrationForm()
@@ -24,17 +28,7 @@ class RegisterController extends Controller
 
     public function register(RegisterRequest $request)
     {
-        $user = User::create([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'password' => bcrypt($request['password']),
-            'verify_token' => Str::random(),
-            'status' => User::STATUS_WAIT,
-        ]);
-
-        Mail::to($user->email)->send(new VerifyMail($user));
-        event(new Registered($user));
-
+        $this->service->create($request);
         return redirect()->route('login')
             ->with('success', 'Check your email and click on the link to verify.');
     }
@@ -51,11 +45,11 @@ class RegisterController extends Controller
                 ->with('error', 'Your email is already verified.');
         }
 
-        $user->status = User::STATUS_ACTIVE;
-        $user->verify_token = null;
-        $user->save();
-
-        return redirect()->route('login')
-            ->with('success', 'Your e-mail is verified. You can now login.');
+        try {
+            $this->service->verify($user->id);
+            return redirect()->route('login')->with('success', 'Your e-mail is verified. You can now login.');
+        } catch (\DomainException $e) {
+            return redirect()->route('login')->with('error', $e->getMessage());
+        }
     }
 }
