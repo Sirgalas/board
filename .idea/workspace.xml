@@ -27,33 +27,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Console/Commands/Advert/ExpireCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Advert.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Photo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Value.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/Adverts/AdvertController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Adverts/AdvertController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Adverts/CreateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/CreateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Admin/Adverts/SearchRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Adverts/AttributesRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Adverts/CreateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Adverts/EditRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Adverts/PhotoRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Adverts/RejectRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Search/Admin/AdvertsSearch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_09_11_195010_create_adverts_tables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/adverts/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/Adverts/Attribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Attribute.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/Region.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Region.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Advert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/AdvertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/assets/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/assets/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/Adverts/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/Adverts/AdvertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/breadcrumbs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -310,6 +292,7 @@
       <workItem from="1599855973794" duration="2092000" />
       <workItem from="1599892685026" duration="3094000" />
       <workItem from="1600016971736" duration="6356000" />
+      <workItem from="1600059227755" duration="5062000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -485,10 +468,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="3042" y="194" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600020406817" />
-    <state x="2704" y="433" key="NewPhpFileDialog" timestamp="1599681730971">
+    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1600060912836">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2704" y="433" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599681730971" />
+    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600060912835" />
     <state x="468" y="135" key="SettingsEditor" timestamp="1599508283576">
       <screen x="0" y="0" width="1920" height="1026" />
     </state>
@@ -507,10 +490,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2586" y="257" width="906" height="673" key="find.popup/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598468671347" />
-    <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597603717067">
+    <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600064617720">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597603717067" />
+    <state x="2641" y="378" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600064617720" />
     <state x="2549" y="226" key="search.everywhere.popup" timestamp="1599163319396">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
