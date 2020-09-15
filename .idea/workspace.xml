@@ -25,7 +25,28 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="add admin adverts" />
+    <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="add admin adverts">
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Router/AdvertsPath.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/adverts/reject.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/adverts/edit/advert.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/adverts/edit/attributes.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/adverts/edit/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/adverts/edit/photos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/adverts/edit/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/_nav.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/_category.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/advert.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/category.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/region.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Entity/Adverts/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Entity/Region.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Region.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Adverts/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Adverts/AdvertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +62,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/app" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -186,7 +207,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -286,6 +307,8 @@
       <workItem from="1599892685026" duration="3094000" />
       <workItem from="1600016971736" duration="6356000" />
       <workItem from="1600059227755" duration="5062000" />
+      <workItem from="1600107101846" duration="6945000" />
+      <workItem from="1600144972534" duration="1684000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -459,11 +482,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2725" y="407" key="DockerComposeFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597643830689" />
-    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl" timestamp="1600025122229">
+    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl" timestamp="1600067122467">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="252" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508262021" />
-    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600025122229" />
+    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600067122467" />
     <state width="1291" height="455" key="GridCell.Tab.0.bottom" timestamp="1599544906985">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -480,24 +503,24 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1291" height="455" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599544906985" />
-    <state x="3042" y="194" key="NewPhpClassDialog" timestamp="1600020406817">
+    <state x="3042" y="194" width="615" height="565" key="NewPhpClassDialog" timestamp="1600146196291">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3042" y="194" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600020406817" />
-    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1600060912836">
+    <state x="3042" y="194" width="615" height="565" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600146196291" />
+    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1600114824224">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600060912835" />
+    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600114824224" />
     <state x="468" y="135" key="SettingsEditor" timestamp="1599508283576">
       <screen x="0" y="0" width="1920" height="1026" />
     </state>
     <state x="468" y="135" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508283576" />
     <state x="2388" y="142" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598383887123" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1599632888624">
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1600066927903">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599509022409" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599632888624" />
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600066927903" />
     <state x="2740" y="420" key="WebDeployment.AddServerDialog.v.1" timestamp="1597865371456">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
