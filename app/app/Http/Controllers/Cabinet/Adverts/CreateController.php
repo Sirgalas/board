@@ -42,9 +42,9 @@ class CreateController extends Controller
     {
         try {
             $advert = $this->service->create(
-                Auth::id(),
-                $category->id,
-                $region ? $region->id : null,
+                Auth::user(),
+                $category,
+                $region ?? null,
                 $request
             );
         } catch (\DomainException $e) {

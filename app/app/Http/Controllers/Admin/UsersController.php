@@ -22,6 +22,7 @@ class UsersController extends Controller
     {
         $this->service=$service;
         $this->search=$search;
+        $this->middleware('can:manage-users');
     }
 
 

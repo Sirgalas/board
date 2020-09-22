@@ -2,6 +2,7 @@
 
 namespace App\Entity\Adverts;
 
+use App\Entity\Adverts\Advert\Advert;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -26,6 +27,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereSort($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereVariants($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|Advert[] $adverts
+ * @property-read int|null $adverts_count
  */
 class Attribute extends Model
 {
@@ -37,7 +40,7 @@ class Attribute extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['name', 'type', 'required', 'default', 'variants', 'sort'];
+    protected $guarded = ['id'];
 
     protected $casts = [
         'variants' => 'array',
@@ -73,5 +76,10 @@ class Attribute extends Model
     public function isNumber(): bool
     {
         return $this->isInteger() || $this->isFloat();
+    }
+
+    public function adverts()
+    {
+        return $this->belongsToMany(Advert::class);
     }
 }

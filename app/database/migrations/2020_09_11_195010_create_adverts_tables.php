@@ -14,9 +14,9 @@ class CreateAdvertsTables extends Migration
     {
         Schema::create('advert_adverts', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('RESTRICT');
-            $table->integer('category_id')->references('id')->on('advert_categories')->onDelete('CASCADE')->onUpdate('RESTRICT');
-            $table->integer('region_id')->nullable()->references('id')->on('advert_region')->onDelete('CASCADE')->onUpdate('RESTRICT');
+            $table->string('user_id')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('RESTRICT');
+            $table->integer('category_id')->references('id')->on('advert_categories');
+            $table->integer('region_id')->nullable()->references('id')->on('advert_region');
             $table->string('title');
             $table->integer('price');
             $table->text('address');

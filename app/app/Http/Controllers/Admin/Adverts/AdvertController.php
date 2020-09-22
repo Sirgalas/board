@@ -23,6 +23,7 @@ class AdvertController extends Controller
     {
         $this->service = $service;
         $this->search=$search;
+        $this->middleware('can:manage-adverts');
     }
 
     public function index(SearchRequest $request)

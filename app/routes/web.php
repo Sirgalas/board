@@ -27,9 +27,9 @@ Route::group([
 ], function () {
     Route::get('/show/{advert}', 'AdvertController@show')->name('show');
     Route::post('/show/{advert}/phone', 'AdvertController@phone')->name('phone');
-
-    Route::get('/all/{category?}', 'AdvertController@index')->name('index.all');
-    Route::get('/{region?}/{category?}', 'AdvertController@index')->name('index');
+    Route::get('/{adverts_path?}', 'AdvertController@index')->name('index')->where('adverts_path', '.+');
+    Route::post('/show/{advert}/favorites', 'FavoriteController@add')->name('favorites');
+    Route::delete('/show/{advert}/favorites', 'FavoriteController@remove');
 });
 
 Route::group(
@@ -50,6 +50,8 @@ Route::group(
             Route::put('/phone', 'PhoneController@verify')->name('phone.verify');
             Route::post('/phone/auth', 'PhoneController@auth')->name('phone.auth');
         });
+        Route::get('favorites', 'FavoriteController@index')->name('favorites.index');
+        Route::delete('favorites/{advert}', 'FavoriteController@remove')->name('favorites.remove');
         Route::group([
             'prefix' => 'adverts',
             'as' => 'adverts.',
@@ -61,7 +63,6 @@ Route::group(
             Route::get('/create/region/{category}/{region?}', 'CreateController@region')->name('create.region');
             Route::get('/create/advert/{category}/{region?}', 'CreateController@advert')->name('create.advert');
             Route::post('/create/advert/{category}/{region?}', 'CreateController@store')->name('create.advert.store');
-
             Route::get('/{advert}/edit', 'ManageController@editForm')->name('edit');
             Route::put('/{advert}/edit', 'ManageController@edit');
             Route::get('/{advert}/photos', 'ManageController@photosForm')->name('photos');

@@ -1,5 +1,7 @@
 <?php
 use App\Providers\SmsServiceProvider;
+use App\Providers\CacheServiceProvider;
+
 return [
 
     /*
@@ -159,7 +161,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        SmsServiceProvider::class
+        SmsServiceProvider::class,
+        CacheServiceProvider::class,
     ],
 
     /*

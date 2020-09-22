@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
+use App\Entity\Adverts\Advert\Advert;
 use App\Http\Requests\Admin\Users\CreateRequest;
 use App\Http\Requests\Auth\RegisterRequest;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
+
 /**
  * App\Entity\User
  *
@@ -51,6 +53,10 @@ use Carbon\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePhoneVerified($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePhoneVerifyToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePhoneVerifyTokenExpire($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|Advert[] $adverts
+ * @property-read int|null $adverts_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|Advert[] $favorites
+ * @property-read int|null $favorites_count
  */
 class User extends Authenticatable
 {
@@ -90,7 +96,7 @@ class User extends Authenticatable
         //'phone_auth' => 'boolean',
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
     protected static function boot()
     {
@@ -220,6 +226,26 @@ class User extends Authenticatable
         return $this->role === self::ROLE_MODERATOR;
     }
 
+    public function addToFavorites($id): void
+    {
+        if ($this->hasInFavorites($id)) {
+            throw new \DomainException('This advert is already added to favorites.');
+        }
+        $this->favorites()->attach($id);
+    }
+
+    public function removeFromFavorites($id): void
+    {
+        $this->favorites()->detach($id);
+    }
+
+    public function hasInFavorites($id): bool
+    {
+        return $this->favorites()->where('id', $id)->exists();
+    }
+
+
+
     public function changePermission($permission): void
     {
         if (!array_key_exists($permission, self::$permissions)) {
@@ -264,5 +290,15 @@ class User extends Authenticatable
     public function hasFilledProfile(): bool
     {
         return !empty($this->name) && !empty($this->last_name) && $this->isPhoneVerified();
+    }
+
+    public function adverts()
+    {
+        return $this->hasMany(Advert::class);
+    }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(Advert::class, 'advert_favorites', 'user_id', 'advert_id');
     }
 }

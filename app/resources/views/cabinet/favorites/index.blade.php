@@ -1,11 +1,7 @@
-@php
-use App\Entity\Adverts\Advert\Advert
-@endphp
-
 @extends('layouts.app')
 
 @section('content')
-    @include('includes._nav',['page'=>'adverts'])
+    @include('includes._nav',['page'=>'favorites'])
 
     <table class="table table-striped">
         <thead>
@@ -15,7 +11,7 @@ use App\Entity\Adverts\Advert\Advert
             <th>Title</th>
             <th>Region</th>
             <th>Category</th>
-            <th>Status</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -31,7 +27,12 @@ use App\Entity\Adverts\Advert\Advert
                     @endif
                 </td>
                 <td>{{ $advert->category->name }}</td>
-                <td><span class="badge badge-{{$advert->classes}}">{{$advert->statuses}}</span>
+                <td>
+                    <form method="POST" action="{{ route('cabinet.favorites.remove', $advert) }}" class="mr-1">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-sm btn-danger"><span class="fa fa-remove"></span> Remove</button>
+                    </form>
                 </td>
             </tr>
         @endforeach

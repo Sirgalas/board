@@ -10,7 +10,7 @@ use App\Http\Requests\Adverts\PhotoRequest;
 use App\UseCases\Adverts\AdvertService;
 use Illuminate\Support\Facades\Gate;
 
-class ManegeController extends Controller
+class ManageController extends Controller
 {
     private $service;
 

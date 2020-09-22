@@ -6,7 +6,7 @@
         <div class="card-header py-3">
             <a href="{{ route('admin.regions.edit', $region) }}" class="btn btn-primary mr-1">Редактировать </a>
             {{Form::open(['route'=>['admin.regions.update', $region],'class'=>"mr-1",'method'=>'post'])}}
-                @csrf
+            {{Form::token()}}
                 @method('DELETE')
                 <button class="btn btn-danger">Delete</button>
             {{Form::close()}}

@@ -19,12 +19,8 @@ use Illuminate\Support\Facades\DB;
 class AdvertService
 {
 
-    public function create(int $userId, int $categoryId, int $regionId,CreateRequest $request)
+    public function create(User $user, Category $category, Region $region,CreateRequest $request)
     {
-        $user=User::findOrFail($userId);
-        $category=Category::findOrFail($categoryId);
-        $region=$regionId?Region::findOrFail($regionId):null;
-
         return DB::transaction(function () use ($request,$user,$category,$region){
 
             /** @var Advert $advert */
@@ -66,6 +62,7 @@ class AdvertService
                     'file'=>$file->store('adverts')
                 ]);
             }
+            $advert->update();
         });
     }
 
@@ -97,7 +94,7 @@ class AdvertService
     public function reject($id, RejectRequest $request): void
     {
         $advert = $this->getAdvert($id);
-        $advert->reject($request['reason']);
+        $advert->reject($request->reason);
     }
 
     public function editAttributes($id, AttributesRequest $request):void
@@ -113,6 +110,7 @@ class AdvertService
                         'value' => $value,
                     ]);
                 }
+                $advert->update();
             }
         });
     }

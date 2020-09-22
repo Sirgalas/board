@@ -26,4 +26,6 @@ class Value extends Model
     public $timestamps = false;
 
     protected $fillable = ['attribute_id', 'value'];
+
+    protected $primaryKey =['advert_id','attribute_id'];
 }

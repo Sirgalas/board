@@ -5,7 +5,13 @@ namespace App\Http\Requests\Adverts;
 use App\Entity\Adverts\Attribute;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use App\Entity\Adverts\Category;
+use App\Entity\Region;
 
+/**
+ * @property Category $category
+ * @property Region $region
+ */
 class CreateRequest extends FormRequest
 {
     public function authorize()
@@ -16,7 +22,7 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         $items=[];
-        foreach ($this->advert->category->allAttributes() as $attribute){
+        foreach ($this->category->allAttributes() as $attribute){
             /** @var $attribute Attribute */
             $rules=[
                 $attribute->required?'required' : 'nullable',
@@ -33,7 +39,7 @@ class CreateRequest extends FormRequest
                     $rules[]='max:255';
                     break;
                 case $attribute->isSelect():
-                    $rules[]=Rule::in($attribute->variants);
+                    $items[]=Rule::in($attribute->variants);
             }
             $items['attribute.'.$attribute->id]=$rules;
         }

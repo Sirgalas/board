@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('cabinet.profile._nav')
+    @include('includes._nav',['page'=>'adverts'])
     {{Form::open(['route'=>(['cabinet.profile.update'])])}}
         {{Form::token()}}
         @method('PUT')

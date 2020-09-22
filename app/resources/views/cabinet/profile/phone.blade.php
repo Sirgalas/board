@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('cabinet.profile._nav')
+    @include('includes._nav',['page'=>'profile'])
 
     <form method="POST" action="{{ route('cabinet.profile.phone.verify') }}">
     {{Form::open(['route'=>('cabinet.profile.phone.verify')])}}

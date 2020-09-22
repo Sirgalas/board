@@ -10,25 +10,31 @@
 <div class="sidebar-heading">
     Pages
 </div>
-
+@can ('manage-users')
 <!-- Nav Item - Tables -->
 <li class="nav-item">
     <a class="nav-link" href="{{ route('admin.users.index') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Пользователи</span></a>
 </li>
+@endcan
+@can ('manage-regions')
 <!-- Nav Item - Tables -->
 <li class="nav-item">
     <a class="nav-link" href="{{ route('admin.regions.index') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Регион</span></a>
 </li>
+@endcan
 <!-- Nav Item - Tables -->
+@can ('manage-adverts-categories')
 <li class="nav-item">
     <a class="nav-link" href="{{ route('admin.adverts.categories.index') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Категории</span></a>
 </li>
+@endcan
+@can ('manage-adverts')
 <li class="nav-item">
     <a class="nav-link collapsed" href="{{ route('admin.adverts.adverts.index') }}" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
         <i class="fas fa-fw fa-folder"></i>
@@ -42,3 +48,4 @@
         </div>
     </div>
 </li>
+@endcan

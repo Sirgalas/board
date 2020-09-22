@@ -2,6 +2,7 @@
 
 namespace App\Entity\Adverts;
 
+use App\Entity\Adverts\Advert\Advert;
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 
@@ -18,6 +19,7 @@ use Kalnoy\Nestedset\NodeTrait;
  * @property Attribute[] $attributes
  * @property int $_lft
  * @property int $_rgt
+ * @property string $path
  * @property-read int|null $attributes_count
  * @property-read int|null $children_count
  * @method static \Kalnoy\Nestedset\Collection|static[] all($columns = ['*'])
@@ -42,11 +44,16 @@ class Category extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['name', 'slug', 'parent_id'];
+    protected $guarded = ['id'];
 
     public function attributes()
     {
         return $this->hasMany(Attribute::class, 'category_id', 'id');
+    }
+
+    public function getPath(): string
+    {
+        return implode('/', array_merge($this->ancestors()->defaultOrder()->pluck('slug')->toArray(), [$this->slug]));
     }
 
     public function parentAttributes(): array
@@ -54,8 +61,16 @@ class Category extends Model
         return $this->parent ? $this->parent->allAttributes() : [];
     }
 
+    /**
+     * @return Attribute[]
+     */
     public function allAttributes(): array
     {
         return array_merge($this->parentAttributes(), $this->attributes()->orderBy('sort')->getModels());
+    }
+
+    public function adverts()
+    {
+        $this->hasMany(Advert::class);
     }
 }

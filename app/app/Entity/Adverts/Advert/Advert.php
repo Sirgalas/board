@@ -2,6 +2,7 @@
 
 namespace App\Entity\Adverts\Advert;
 
+use App\Entity\Adverts\Attribute;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use App\Entity\User;
@@ -26,6 +27,8 @@ use Illuminate\Database\Eloquent\Builder;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $published_at
  * @property \Illuminate\Support\Carbon|null $expires_at
+ * @property string $classes
+ * 2@property string $statuses
  * @property-read Category $category
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Entity\Adverts\Advert\Photo[] $photos
  * @property-read int|null $photos_count
@@ -55,6 +58,10 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static Builder|Advert whereUpdatedAt($value)
  * @method static Builder|Advert whereUserId($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|User[] $favorites
+ * @property-read int|null $favorites_count
+ * @property-read mixed $statuses
+ * @method static Builder|Advert favoredByUser(\App\Entity\User $user)
  */
 class Advert extends Model
 {
@@ -74,7 +81,7 @@ class Advert extends Model
     ];
 
     public static $statusesList=[
-        self::STATUS_DRAFT=>'Draft',
+        self::STATUS_DRAFT=>'Не опубликовано',
         self::STATUS_MODERATION=>'На модерации',
         self::STATUS_ACTIVE=>'Активный',
         self::STATUS_CLOSED=>'Закрыто',
@@ -92,10 +99,10 @@ class Advert extends Model
     public function sendToModeration():void
     {
         if(!$this->isDraft()){
-            throw  new \DomainException('Advert is not draft.');
+            throw  new \DomainException('На модерацию можно отправить  только черновик.');
         }
         if(!count($this->photos)){
-            throw new \DomainException('Upload photos.');
+            throw new \DomainException('не загружено ни одной картинки.');
         }
         $this->update([
             'status' => self::STATUS_MODERATION,
@@ -105,7 +112,7 @@ class Advert extends Model
     public function moderate(Carbon $date):void
     {
         if($this->status !== self::STATUS_MODERATION){
-            throw new \DomainException('Advert is not sent to moderation.');
+            throw new \DomainException('Объявление не на модерацию.');
         }
         $this->update([
             'published_at' => $date,
@@ -166,17 +173,17 @@ class Advert extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class);
     }
 
     public function category()
     {
-        return $this->belongsTo(Category::class, 'category_id', 'id');
+        return $this->belongsTo(Category::class);
     }
 
     public function region()
     {
-        return $this->belongsTo(Region::class, 'region_id', 'id');
+        return $this->belongsTo(Region::class);
     }
 
     public function values()
@@ -187,6 +194,16 @@ class Advert extends Model
     public function photos()
     {
         return $this->hasMany(Photo::class, 'advert_id', 'id');
+    }
+
+    public function attributes()
+    {
+        $this->belongsToMany(Attribute::class);
+    }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(User::class, 'advert_favorites', 'advert_id', 'user_id');
     }
 
     public function scopeActive(Builder $query)
@@ -215,5 +232,22 @@ class Advert extends Model
             $ids = array_merge($ids, $childrenIds);
         }
         return $query->whereIn('region_id', $ids);
+    }
+
+    public function scopeFavoredByUser(Builder $query, User $user)
+    {
+        return $query->whereHas('favorites', function(Builder $query) use ($user) {
+            $query->where('user_id', $user->id);
+        });
+    }
+
+    public function getClassesAttribute()
+    {
+        return self::$statusClasses[$this->status];
+    }
+
+    public function getStatusesAttribute()
+    {
+        return self::$statusesList[$this->status];
     }
 }

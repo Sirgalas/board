@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Builder;
  * @property int|null $parent_id
  * @property Region $parent
  * @property Region[] $children
+ * @property string $address
+ * @property string $path
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read int|null $children_count
@@ -31,11 +33,16 @@ use Illuminate\Database\Eloquent\Builder;
  */
 class Region extends Model
 {
-    protected $fillable = ['name', 'slug', 'parent_id'];
+    protected $guarded = ['id'];
 
-    public function getAddress(): string
+    public function getPath(): string
     {
-        return ($this->parent ? $this->parent->getAddress() . ', ' : '') . $this->name;
+        return ($this->parent ? $this->parent->getPath() . '/' : '') . $this->slug;
+    }
+
+    public function getAddressAttribute(): string
+    {
+        return ($this->parent ? $this->parent->address . ', ' : '') . $this->name;
     }
 
     public function parent()
