@@ -124,6 +124,7 @@
       <path value="$PROJECT_DIR$/app/vendor/davejamesmiller/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/app/vendor/kalnoy/nestedset" />
       <path value="$PROJECT_DIR$/app/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/app/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

@@ -26,22 +26,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/helpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Providers/CacheServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel_socket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_socket.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Advert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/Adverts/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/Region.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Region.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/ManegeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/ManageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/.phpstorm.meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/Router/AdvertsPath.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Router/AdvertsPath.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/adverts/edit/photos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/adverts/edit/photos.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/adverts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/adverts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/adverts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/redis/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +191,7 @@
       <path value="$PROJECT_DIR$/app/vendor/davejamesmiller/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/app/vendor/kalnoy/nestedset" />
       <path value="$PROJECT_DIR$/app/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/app/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fV2RRPM84VKLR7a3vItoPK0OsT" />
@@ -204,7 +203,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/var/www/rosinfra.lc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -314,6 +313,12 @@
       <workItem from="1600319520094" duration="2737000" />
       <workItem from="1600369427274" duration="5362000" />
       <workItem from="1600435842286" duration="5696000" />
+      <workItem from="1600460404431" duration="1753000" />
+      <workItem from="1600664341494" duration="2874000" />
+      <workItem from="1600713525545" duration="3646000" />
+      <workItem from="1600752396427" duration="3042000" />
+      <workItem from="1600757415026" duration="620000" />
+      <workItem from="1600796750142" duration="592000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -519,11 +524,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2725" y="407" key="DockerComposeFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597643830689" />
-    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl" timestamp="1600439727884">
+    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl" timestamp="1600758870189">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="252" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508262021" />
-    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600439727884" />
+    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600758870189" />
     <state width="1291" height="454" key="GridCell.Tab.0.bottom" timestamp="1600371263341">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -540,10 +545,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1291" height="454" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600371263341" />
-    <state x="3042" y="194" width="615" height="565" key="NewPhpClassDialog" timestamp="1600146196291">
+    <state x="3042" y="194" width="615" height="565" key="NewPhpClassDialog" timestamp="1600752737254">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3042" y="194" width="615" height="565" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600146196291" />
+    <state x="3042" y="194" width="615" height="565" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600752737254" />
     <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1600440635405">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
