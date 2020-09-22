@@ -14,7 +14,6 @@ services:
       - board
     ports:
       - "8205:3000"
-
   php-fpm:
     build: docker/php-fpm
     depends_on:
@@ -32,7 +31,6 @@ services:
       - DOCKER_CRON=${DOCKER_CRON}
     networks:
         - board
-
   nginx:
     image: nginx:1.16-alpine
     depends_on:
@@ -87,7 +85,13 @@ services:
       - "8204:6379"
     networks:
       - board
-
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8206:8080"
+    networks:
+      - board
 networks:
   board:
     driver: bridge
