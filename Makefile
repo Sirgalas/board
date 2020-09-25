@@ -1,6 +1,6 @@
 include .env
 
-up: # create and start containers
+up: memory # create and start containers
 	@docker-compose -f ${DOCKER_CONFIG} up -d
 
 down: # stop and destroy containers
@@ -18,9 +18,11 @@ stop: # stop containers, but not destroy
 ps: # show started containers and their status
 	@docker-compose -f ${DOCKER_CONFIG} ps
 
-build: # build all dockerfile, if not built yet
+build:memory # build all dockerfile, if not built yet
 	@docker-compose -f ${DOCKER_CONFIG} build
 
+memory:
+	sudo sysctl -w vm.max_map_count=262144
 
 connect_app: # php-fpm command line
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm sh
