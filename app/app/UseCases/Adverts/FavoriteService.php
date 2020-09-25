@@ -11,13 +11,13 @@ class FavoriteService
     public function add(string $userId,Advert $advert):void
     {
         $user = $this->getUser($userId);
-        $user->addToFavorites($advert->id);
+        $user->addToFavorites($advert);
     }
 
     public function remove(string $userId,Advert $advert):void
     {
         $user=$this->getUser($userId);
-        $user->removeFromFavorites($advert->id);
+        $user->removeFromFavorites($advert);
     }
 
     private function getUser(string $userId):User

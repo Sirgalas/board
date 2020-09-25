@@ -226,12 +226,12 @@ class User extends Authenticatable
         return $this->role === self::ROLE_MODERATOR;
     }
 
-    public function addToFavorites($id): void
+    public function addToFavorites(Advert $advert): void
     {
-        if ($this->hasInFavorites($id)) {
+        if ($this->hasInFavorites($advert->id)) {
             throw new \DomainException('This advert is already added to favorites.');
         }
-        $this->favorites()->attach($id);
+        $this->favorites()->attach($advert);
     }
 
     public function removeFromFavorites($id): void

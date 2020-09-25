@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin\Adverts;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Entity\Adverts\Category;
+use App\Http\Requests\Admin\Adverts\Category\CreateRequest;
+use App\Http\Requests\Admin\Adverts\Category\UpdateRequest;
 
 class CategoryController extends Controller
 {
@@ -27,18 +29,13 @@ class CategoryController extends Controller
         return view('admin.adverts.categories.create', compact('parents'));
     }
 
-    public function store(Request $request)
+    public function store(CreateRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required|string|max:255',
-            'slug' => 'required|string|max:255',
-            'parent' => 'nullable|integer|exists:advert_categories,id',
-        ]);
 
         $category = Category::create([
-            'name' => $request['name'],
-            'slug' => $request['slug'],
-            'parent_id' => $request['parent'],
+            'name' => $request->name,
+            'slug' => $request->slug,
+            'parent_id' => $request->parent,
         ]);
 
         return redirect()->route('admin.adverts.categories.show', $category);
@@ -58,14 +55,8 @@ class CategoryController extends Controller
         return view('admin.adverts.categories.edit', compact('category', 'parents'));
     }
 
-    public function update(Request $request, Category $category)
+    public function update(UpdateRequest $request, Category $category)
     {
-        $this->validate($request, [
-            'name' => 'required|string|max:255',
-            'slug' => 'required|string|max:255',
-            'parent' => 'nullable|integer|exists:advert_categories,id',
-        ]);
-
         $category->update([
             'name' => $request['name'],
             'slug' => $request['slug'],

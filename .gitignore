@@ -1,5 +1,7 @@
 .env
 xxx.txt
 /docker/postgres
+/docker/elasticsearch
+/docker/redis
 .idea
 .git

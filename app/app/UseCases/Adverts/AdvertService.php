@@ -13,8 +13,10 @@ use App\Entity\Adverts\Advert\Advert;
 use App\Http\Requests\Adverts\EditRequest;
 use App\Http\Requests\Adverts\PhotoRequest;
 use App\Http\Requests\Adverts\RejectRequest;
+use App\Mail\Auth\VerifyMail;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class AdvertService
 {
@@ -69,6 +71,7 @@ class AdvertService
     public function edit(int $id,EditRequest $request):void
     {
         $advert=$this->getAdvert($id);
+        $old=$advert->price;
         $advert->update(
             $request->only([
                 'title',

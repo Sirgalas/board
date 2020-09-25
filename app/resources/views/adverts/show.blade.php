@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-
     @if ($advert->isDraft())
         <div class="alert alert-danger">
             It is a draft.
@@ -12,7 +10,6 @@
             </div>
         @endif
     @endif
-
     @can ('manage-adverts')
         <div class="d-flex flex-row mb-3">
             <a href="{{ route('admin.adverts.adverts.edit', $advert) }}" class="btn btn-primary mr-1">Edit</a>
@@ -34,7 +31,6 @@
             {{Form::close()}}
         </div>
     @endcan
-
     @can ('manage-own-advert', $advert)
         <div class="d-flex flex-row mb-3">
             <a href="{{ route('cabinet.adverts.edit', $advert) }}" class="btn btn-primary mr-1">Edit</a>
@@ -58,10 +54,8 @@
             {{Form::close()}}
         </div>
     @endcan
-
     <div class="row">
         <div class="col-md-9">
-
             <p class="float-right" style="font-size: 36px;">{{ $advert->price }}</p>
             <h1 style="margin-bottom: 10px">{{ $advert->title  }}</h1>
             <p>
@@ -72,7 +66,6 @@
                     Expires: {{ $advert->expires_at }}
                 @endif
             </p>
-
             <div style="margin-bottom: 20px">
                 <div class="row">
                     <div class="col-10">
@@ -87,15 +80,21 @@
                 </div>
             </div>
             <p>{!! nl2br(e($advert->content)) !!}</p>
+            <table class="table table-bordered">
+                <tbody>
+                @foreach ($advert->category->allAttributes() as $attribute)
+                    <tr>
+                        <th>{{ $attribute->name }}</th>
+                        <td>{{ $advert->getValue($attribute->id) }}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
             <hr/>
             <p>Address: {{ $advert->address }}</p>
-
             <div style="margin: 20px 0; border: 1px solid #ddd">
-
                 <div id="map" style="width: 100%; height: 250px"></div>
-
                 <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-
                 <script type='text/javascript'>
                     ymaps.ready(init);
                     function init(){
@@ -133,16 +132,16 @@
                     {{Form::open(['route'=>['adverts.favorites', $advert],'class'=>"mr-1",'method'=>'post'])}}
                         {{Form::token()}}
                         @method('DELETE')
-                        {{Form::button('<span class="fa fa-star"></span> Убрать из избранных',['class'=>"btn btn-secondary"])}}
+                        {{Form::submit('<span class="fa fa-star"></span> Убрать из избранных',['class'=>"btn btn-secondary"])}}
                     {{Form::close()}}
                 @else
                     {{Form::open(['route'=>['adverts.favorites', $advert],'class'=>"mr-1",'method'=>'post'])}}
-                        {{Form::token()}}
-                        {{Form::button('<span class="fa fa-star"></span> Убрать из избранных',['class'=>"btn btn-danger"])}}
+
+                        {{Form::button('<span class="fa fa-star"></span> Добавить в избранное',['class'=>"btn btn-danger"])}}
+                        {{Form::submit('<span class="fa fa-star"></span> Добавить в избранное',['class'=>"btn btn-danger"])}}
                     {{Form::close()}}
                 @endif
             </div>
-
             <hr/>
             <div class="h3">Similar adverts</div>
             <div class="row">
