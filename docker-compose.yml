@@ -1,19 +1,5 @@
 version: '3.6'
 services:
-  node:
-    build: docker/nodejs
-    links:
-      - redis
-    environment:
-      - REDIS_URL=redis://cache
-    depends_on:
-      - php-fpm
-    volumes:
-      - "./:/www"
-    networks:
-      - board
-    ports:
-      - "8205:3000"
   php-fpm:
     build: docker/php-fpm
     depends_on:
@@ -68,7 +54,6 @@ services:
       - "8202:5432"
     networks:
       - board
-
   mailhog:
     image: mailhog/mailhog:latest
     ports:
@@ -85,6 +70,20 @@ services:
       - "8204:6379"
     networks:
       - board
+  node:
+    build: docker/nodejs
+    links:
+      - redis
+    environment:
+      - REDIS_URL=redis://cache
+    depends_on:
+      - php-fpm
+    volumes:
+      - "./:/www"
+    networks:
+      - board
+    ports:
+      - "8205:3000"
   adminer:
     image: adminer
     restart: always
