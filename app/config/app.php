@@ -1,6 +1,8 @@
 <?php
+
 use App\Providers\SmsServiceProvider;
 use App\Providers\CacheServiceProvider;
+use App\Providers\SearchServiceProvider;
 
 return [
 
@@ -163,6 +165,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         SmsServiceProvider::class,
         CacheServiceProvider::class,
+        SearchServiceProvider::class,
     ],
 
     /*
