@@ -17,6 +17,7 @@ services:
       - DOCKER_XDEBUG=${DOCKER_XDEBUG}
       - DOCKER_SUPERVISOR=${DOCKER_SUPERVISOR}
       - DOCKER_CRON=${DOCKER_CRON}
+      - COMPOSER_MEMORY_LIMIT=-1
     networks:
         - board
   nginx:

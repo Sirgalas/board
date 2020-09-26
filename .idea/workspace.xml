@@ -25,12 +25,24 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
+    <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="add elastic in docker">
+      <change afterPath="$PROJECT_DIR$/app/app/Providers/SearchServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/elasticsearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel_socket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_socket.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/storage/docker/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/elasticsearch/nodes/0/_state/_p.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/elasticsearch/nodes/0/_state/_p.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/elasticsearch/nodes/0/_state/_p.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/elasticsearch/nodes/0/_state/manifest-2.st" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/elasticsearch/nodes/0/_state/node-2.st" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/elasticsearch/nodes/0/_state/segments_s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +60,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/app" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -183,6 +195,10 @@
       <path value="$PROJECT_DIR$/app/vendor/kalnoy/nestedset" />
       <path value="$PROJECT_DIR$/app/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/app/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/app/vendor/elasticsearch/elasticsearch" />
+      <path value="$PROJECT_DIR$/app/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/app/vendor/ezimuel/guzzlestreams" />
+      <path value="$PROJECT_DIR$/app/vendor/ezimuel/ringphp" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fV2RRPM84VKLR7a3vItoPK0OsT" />
@@ -314,7 +330,9 @@
       <workItem from="1601011060902" duration="2060000" />
       <workItem from="1601014769191" duration="20000" />
       <workItem from="1601062366110" duration="333000" />
-      <workItem from="1601065293431" duration="2821000" />
+      <workItem from="1601065293431" duration="3259000" />
+      <workItem from="1601106908045" duration="545000" />
+      <workItem from="1601107935415" duration="3528000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -442,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601013113102</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add elastic in docker">
+      <created>1601068115082</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1601068115082</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,11 +573,15 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600025125354" />
-    <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2" timestamp="1601068114085">
+    <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2" timestamp="1601068175466">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="575" y="64" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508969569" />
-    <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601068114085" />
+    <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601068175466" />
+    <state x="2112" y="60" key="DiffContextDialog" timestamp="1601068369762">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2112" y="60" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601068369762" />
     <state x="2725" y="407" key="DockerComposeFileDialog" timestamp="1597643830689">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -578,25 +607,25 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1291" height="453" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600806256524" />
-    <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog" timestamp="1600803050315">
+    <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog" timestamp="1601110733343">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600803050315" />
-    <state x="784" y="411" width="351" height="160" key="NewPhpFileDialog" timestamp="1600889552739">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601110733343" />
+    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1601110913650">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="784" y="411" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1600889552739" />
-    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600805561907" />
+    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601110913650" />
     <state x="2388" y="142" key="SettingsEditor" timestamp="1600437316401">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="468" y="135" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508283576" />
     <state x="2388" y="142" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600437316401" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1601013115046">
+    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1601068371000">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599509022409" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601013115046" />
+    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601068371000" />
     <state x="2740" y="420" key="WebDeployment.AddServerDialog.v.1" timestamp="1597865371456">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

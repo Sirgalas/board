@@ -130,4 +130,4 @@ RUN set -xe \
 		&& curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=$COMPOSER_VERSION \
 		&& ln -s $(pwd)/.composer /home/$DOCKER_USER/.composer
 
-RUN echo "php_admin_value[memory_limit] = 12560M" >> /usr/local/etc/php-fpm.d/www.conf
+
