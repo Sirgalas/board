@@ -28,7 +28,6 @@ use Illuminate\Database\Eloquent\Builder;
  * @property \Illuminate\Support\Carbon|null $published_at
  * @property \Illuminate\Support\Carbon|null $expires_at
  * @property string $classes
- * 2@property string $statuses
  * @property-read Category $category
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Entity\Adverts\Advert\Photo[] $photos
  * @property-read int|null $photos_count
