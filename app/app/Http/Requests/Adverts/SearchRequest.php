@@ -4,6 +4,11 @@ namespace App\Http\Requests\Adverts;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class SearchRequest
+ * @package App\Http\Requests\Adverts
+ * @property string $text
+ */
 class SearchRequest extends FormRequest
 {
     public function authorize(): bool
