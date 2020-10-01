@@ -28,7 +28,7 @@ class SearchService
 
         $response = $this->client->search([
             'index' => 'app',
-            'type' => 'advert',
+            //'type' => 'advert',
             'body' => [
                 '_source' => ['id'],
                 'from' => ($page - 1) * $perPage,
@@ -88,10 +88,18 @@ class SearchService
         $ids = array_column($response['hits']['hits'], '_id');
 
         if ($ids) {
+
+            $when='case';
+            for ($i=0; $i<count($ids);$i++){
+
+                $when.=' when( id ='.$ids[$i].') then '.$i.'';
+            }
+            $when.='else '.array_key_last($ids).' end';
+
             $items = Advert::active()
                 ->with(['category', 'region'])
                 ->whereIn('id', $ids)
-                ->orderBy(new Expression('FIELD(id,' . implode(',', $ids) . ')'))
+                ->orderBy(new Expression($when))
                 ->get();
             $pagination = new LengthAwarePaginator($items, $response['hits']['total'], $perPage, $page);
         } else {
