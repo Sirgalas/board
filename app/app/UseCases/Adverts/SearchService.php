@@ -91,7 +91,6 @@ class SearchService
 
             $when='case';
             for ($i=0; $i<count($ids);$i++){
-
                 $when.=' when( id ='.$ids[$i].') then '.$i.'';
             }
             $when.='else '.array_key_last($ids).' end';
@@ -101,7 +100,7 @@ class SearchService
                 ->whereIn('id', $ids)
                 ->orderBy(new Expression($when))
                 ->get();
-            $pagination = new LengthAwarePaginator($items, $response['hits']['total'], $perPage, $page);
+            $pagination = new LengthAwarePaginator($items, $response['hits']['total']['value'], $perPage, $page);
         } else {
             $pagination = new LengthAwarePaginator([], 0, $perPage, $page);
         }

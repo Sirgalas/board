@@ -37,7 +37,6 @@ class AdvertIndexer
                 $regions[] = $region->id;
             } while ($region = $region->parent);
         }
-        dump($advert->price);
         $this->client->index([
             'index' => 'app',
             //'type' => 'advert',
