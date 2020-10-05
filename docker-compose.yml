@@ -14,10 +14,10 @@ services:
       - "./:/www"
     environment:
       - DOCKER_PHP_CONFIG=${DOCKER_PHP_CONFIG}
-      - DOCKER_XDEBUG=${DOCKER_XDEBUG}
       - DOCKER_SUPERVISOR=${DOCKER_SUPERVISOR}
       - DOCKER_CRON=${DOCKER_CRON}
       - COMPOSER_MEMORY_LIMIT=-1
+      - PHP_IDE_CONFIG =serverName=Socket
     networks:
         - board
   nginx:
@@ -25,8 +25,8 @@ services:
     depends_on:
       - php-fpm
     ports:
-      - "8200:80"
-      - "8243:443"
+      - "8300:80"
+      - "8343:443"
     volumes:
       - "./:/www"
       - "./docker/nginx/conf.d:/etc/nginx/conf.d"
@@ -42,7 +42,7 @@ services:
       - POSTGRES_USER=${DOCKER_USERNAME}
       - POSTGRES_PASSWORD=${DOCKER_PASSWORD}
     ports:
-      - "8201:5432"
+      - "8301:5432"
     networks:
       - board
   test-db:
@@ -54,13 +54,13 @@ services:
       - POSTGRES_USER=${DOCKER_USERNAME}
       - POSTGRES_PASSWORD=${DOCKER_PASSWORD}
     ports:
-      - "8202:5432"
+      - "8302:5432"
     networks:
       - board
   mailhog:
     image: mailhog/mailhog:latest
     ports:
-      - "8203:8025"
+      - "8303:8025"
     depends_on:
       - php-fpm
     networks:
@@ -70,7 +70,7 @@ services:
     volumes:
       - ./docker/redis:/data
     ports:
-      - "8204:6379"
+      - "8304:6379"
     networks:
       - board
   node:
@@ -86,12 +86,12 @@ services:
     networks:
       - board
     ports:
-      - "8205:3000"
+      - "8305:3000"
   adminer:
     image: adminer
     restart: always
     ports:
-      - "8206:8080"
+      - "8306:8080"
     networks:
       - board
   elasticsearch:
@@ -113,7 +113,7 @@ services:
     volumes:
       - ./docker/elasticsearch:/usr/share/elasticsearch/data
     ports:
-      - "8207:9200"
+      - "8307:9200"
     networks:
       - board
 networks:

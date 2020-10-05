@@ -26,12 +26,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/resources/views/layouts/partials/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Console/Commands/Banner/ExpireCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Entity/Banner/Banner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Events/Adverts/Create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Events/Adverts/Remove.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Events/Event.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/BannerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/BannerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Banners/BannerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/PaymentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Admin/BannerRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Banner/CreateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Banner/EditRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Banner/FileRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Banner/GetRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Banner/RejectRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Payment/PaymentRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Search/Admin/BannerSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Listener/Adverts/CreateListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Listener/Adverts/RemoveListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Services/Banner/CostCalculator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Services/Search/BannerIndexer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/UseCases/Banner/BannerService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/banner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_10_05_142301_create_banners_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php-fpm/php.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php-fpm/xdebug.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Console/Commands/Search/InitCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Commands/Search/InitCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Console/Commands/Search/ReindexCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Commands/Search/ReindexCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Adverts/CreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Banners/CreateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/ManageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/ManageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/EventServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Services/Search/AdvertIndexer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Services/Search/AdvertIndexer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/UseCases/Adverts/SearchService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/UseCases/Adverts/SearchService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/adverts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/assets/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/assets/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/advert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/advert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/region.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/region.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,13 +96,18 @@
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" max_simultaneous_connections="1" zd_debug_port="20080" />
   <component name="PhpServers">
     <servers>
-      <server host="http://localhost" id="27d48247-2b5b-4c6a-9271-2328a12e3926" name="docker" port="8200" />
+      <server host="localhost" id="27d48247-2b5b-4c6a-9271-2328a12e3926" name="Socket" port="8300" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/app" remote-root="/var/www" />
+        </path_mappings>
+      </server>
     </servers>
   </component>
-  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8200" />
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$/app/public" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8300" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php-fpm">
     <include_path>
       <path value="$PROJECT_DIR$/app/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/app/vendor/tijsverkoyen/css-to-inline-styles" />
@@ -190,6 +238,7 @@
       <path value="$PROJECT_DIR$/app/vendor/ezimuel/ringphp" />
     </include_path>
   </component>
+  <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="Socket" port="9000" />
   <component name="ProjectId" id="1fV2RRPM84VKLR7a3vItoPK0OsT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -207,7 +256,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.php.debug.xdebug.proxy" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -225,8 +274,17 @@
       <recent name="$PROJECT_DIR$/app/app/Http/Controllers" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="docker">
+  <component name="RunManager" selected="PHP Web Page.test">
+    <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8200">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="Socket" session_id="PHPSTORM">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Socket">
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Socket">
       <method v="2" />
     </configuration>
     <configuration name="board" type="docker-deploy" factoryName="docker-compose.yml" server-name="laravel_board">
@@ -237,6 +295,10 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.board" />
+      <item itemvalue="PHP Web Page.test" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -331,7 +393,15 @@
       <workItem from="1601530906344" duration="3401000" />
       <workItem from="1601580161992" duration="3859000" />
       <workItem from="1601615461650" duration="294000" />
-      <workItem from="1601615787183" duration="3692000" />
+      <workItem from="1601615787183" duration="3996000" />
+      <workItem from="1601700308545" duration="7981000" />
+      <workItem from="1601728537524" duration="2869000" />
+      <workItem from="1601731575124" duration="708000" />
+      <workItem from="1601880766328" duration="1026000" />
+      <workItem from="1601881803479" duration="32000" />
+      <workItem from="1601889786402" duration="6803000" />
+      <workItem from="1601904006118" duration="5639000" />
+      <workItem from="1601922017950" duration="5983000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -487,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601533786307</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="redact form elasticsearch">
+      <created>1601620163879</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1601620163879</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,46 +637,66 @@
     <MESSAGE value="add elasticsearch" />
     <MESSAGE value="add elasticsearch aggregation" />
     <MESSAGE value="redact errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="redact errors" />
+    <MESSAGE value="redact form elasticsearch" />
+    <option name="LAST_COMMIT_MESSAGE" value="redact form elasticsearch" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2467" y="165" key="#CLI_Interpreters" timestamp="1597865275350">
+    <state x="2467" y="165" key="#CLI_Interpreters" timestamp="1601729819830">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2467" y="165" key="#CLI_Interpreters/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601729819830" />
     <state x="2467" y="165" key="#CLI_Interpreters/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597865275350" />
+    <state x="2479" y="193" key="#Docker" timestamp="1601706179577">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2479" y="193" key="#Docker/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601706179577" />
     <state x="2479" y="151" key="#Plugins" timestamp="1599856353295">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2479" y="151" key="#Plugins/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599856353295" />
-    <state x="2338" y="171" width="1084" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597865478598">
+    <state x="2064" y="179" width="1229" height="696" key="#Servers" timestamp="1601894764750">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2064" y="179" width="1229" height="696" key="#Servers/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601894764750" />
+    <state x="2722" y="326" key="#Web_Browsers" timestamp="1601892421739">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2722" y="326" key="#Web_Browsers/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601892421739" />
+    <state x="2383" y="30" width="1084" height="1026" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601894768180">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2383" y="30" width="1084" height="1026" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601894768180" />
     <state x="2338" y="171" width="1084" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597865478598" />
     <state x="2634" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601067082586">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2634" y="310" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601067082586" />
-    <state x="2344" y="0" width="752" height="1026" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598991412217">
+    <state x="2344" y="0" width="752" height="1026" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601701405414">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2344" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601701405414" />
     <state x="2344" y="0" width="752" height="1026" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598991412217" />
-    <state x="697" y="252" width="526" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600889226019">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state x="2617" y="265" width="526" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601701542108">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2617" y="265" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601701542108" />
     <state x="697" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1600889226019" />
     <state x="2617" y="265" width="526" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600017166418" />
-    <state x="2602" y="344" width="556" height="337" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1597865474497">
+    <state x="2602" y="344" width="628" height="589" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1601894556607">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2602" y="344" width="628" height="589" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601894556607" />
     <state x="2602" y="344" width="556" height="337" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597865474497" />
-    <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1600025125354">
+    <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1601925468594">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601925468594" />
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600025125354" />
-    <state x="575" y="64" width="769" height="853" key="CommitChangelistDialog2" timestamp="1601533785623">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state x="2495" y="67" width="769" height="853" key="CommitChangelistDialog2" timestamp="1601620163472">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="575" y="64" width="769" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601533785623" />
+    <state x="2495" y="67" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601620163472" />
     <state x="575" y="64" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508969569" />
     <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361378500" />
     <state x="2112" y="60" key="DiffContextDialog" timestamp="1601068369762">
@@ -610,52 +707,90 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2725" y="407" key="DockerComposeFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597643830689" />
-    <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl" timestamp="1601534988235">
+    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl" timestamp="1601910878224">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2667" y="265" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601534988235" />
+    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601910878224" />
     <state x="747" y="252" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508262021" />
     <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361433874" />
-    <state width="1291" height="453" key="GridCell.Tab.0.bottom" timestamp="1601532724234">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state width="1872" height="463" key="GridCell.Tab.0.bottom" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1291" height="453" key="GridCell.Tab.0.bottom/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601532724234" />
+    <state width="1872" height="463" key="GridCell.Tab.0.bottom/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
     <state width="1291" height="453" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600806256524" />
-    <state width="1291" height="453" key="GridCell.Tab.0.center" timestamp="1601532724234">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state width="1872" height="463" key="GridCell.Tab.0.center" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1291" height="453" key="GridCell.Tab.0.center/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601532724234" />
+    <state width="1872" height="463" key="GridCell.Tab.0.center/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
     <state width="1291" height="453" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600806256523" />
-    <state width="1291" height="453" key="GridCell.Tab.0.left" timestamp="1601532724234">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state width="1872" height="463" key="GridCell.Tab.0.left" timestamp="1601900463833">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1291" height="453" key="GridCell.Tab.0.left/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601532724234" />
+    <state width="1872" height="463" key="GridCell.Tab.0.left/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463833" />
     <state width="1291" height="453" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600806256523" />
-    <state width="1291" height="453" key="GridCell.Tab.0.right" timestamp="1601532724234">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state width="1872" height="463" key="GridCell.Tab.0.right" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1291" height="453" key="GridCell.Tab.0.right/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601532724234" />
+    <state width="1872" height="463" key="GridCell.Tab.0.right/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
     <state width="1291" height="453" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600806256524" />
-    <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog" timestamp="1601408835269">
+    <state width="1872" height="463" key="GridCell.Tab.1.bottom" timestamp="1601900463834">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3042" y="194" key="NewPhpClassDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601408835269" />
+    <state width="1872" height="463" key="GridCell.Tab.1.bottom/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
+    <state width="1872" height="463" key="GridCell.Tab.1.center" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="463" key="GridCell.Tab.1.center/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
+    <state width="1872" height="463" key="GridCell.Tab.1.left" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="463" key="GridCell.Tab.1.left/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
+    <state width="1872" height="463" key="GridCell.Tab.1.right" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="463" key="GridCell.Tab.1.right/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
+    <state width="1872" height="463" key="GridCell.Tab.2.bottom" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="463" key="GridCell.Tab.2.bottom/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
+    <state width="1872" height="463" key="GridCell.Tab.2.center" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="463" key="GridCell.Tab.2.center/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
+    <state width="1872" height="463" key="GridCell.Tab.2.left" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="463" key="GridCell.Tab.2.left/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
+    <state width="1872" height="463" key="GridCell.Tab.2.right" timestamp="1601900463834">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1872" height="463" key="GridCell.Tab.2.right/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
+    <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog" timestamp="1601923862270">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3042" y="194" key="NewPhpClassDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601923862270" />
     <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601324573342" />
-    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1601583757373">
+    <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1601930323378">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2704" y="433" key="NewPhpFileDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601583757373" />
+    <state x="2704" y="433" key="NewPhpFileDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601930323378" />
     <state x="784" y="411" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1600889552739" />
     <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601110913650" />
-    <state x="2388" y="142" key="SettingsEditor" timestamp="1600437316401">
+    <state x="2650" y="190" key="SettingsEditor" timestamp="1601893938258">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2650" y="190" key="SettingsEditor/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601893938258" />
     <state x="468" y="135" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508283576" />
     <state x="2388" y="142" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600437316401" />
-    <state x="559" y="231" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1601533788641">
-      <screen x="0" y="0" width="1920" height="1026" />
+    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1601620168808">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601533788641" />
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601620168808" />
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599509022409" />
     <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361390488" />
     <state x="2740" y="420" key="WebDeployment.AddServerDialog.v.1" timestamp="1597865371456">
@@ -675,5 +810,51 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2549" y="226" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1599163319396" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php</url>
+          <line>1033</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php</url>
+          <line>1032</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php</url>
+          <line>43</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/CreateController.php</url>
+          <line>43</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Adverts/CreateController.php</url>
+          <line>42</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/public/index.php</url>
+          <line>51</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,4 +1,5 @@
 include .env
+init: down-volume build up
 
 up: memory # create and start containers
 	@docker-compose -f ${DOCKER_CONFIG} up -d
@@ -18,7 +19,7 @@ stop: # stop containers, but not destroy
 ps: # show started containers and their status
 	@docker-compose -f ${DOCKER_CONFIG} ps
 
-build:memory # build all dockerfile, if not built yet
+build:# build all dockerfile, if not built yet
 	@docker-compose -f ${DOCKER_CONFIG} build
 
 memory:
