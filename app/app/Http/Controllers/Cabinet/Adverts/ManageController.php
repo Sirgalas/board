@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Cabinet\Adverts;
 
 use App\Entity\Adverts\Advert\Advert;
+use App\Events\Adverts\Create;
+use App\Events\Adverts\Remove;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Adverts\AttributesRequest;
 use App\Http\Requests\Adverts\EditRequest;
@@ -30,6 +32,12 @@ class ManageController extends Controller
         $this->checkAccess($advert);
         try {
             $this->service->edit($advert->id, $request);
+            if($advert->status==Advert::STATUS_ACTIVE){
+                event(new Create($advert));
+            }else{
+                event(new Remove($advert));
+            }
+
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
@@ -90,6 +98,7 @@ class ManageController extends Controller
         $this->checkAccess($advert);
         try {
             $this->service->close($advert->id);
+            event(new Remove($advert));
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
@@ -101,6 +110,7 @@ class ManageController extends Controller
     {
         $this->checkAccess($advert);
         try {
+            event(new Remove($advert));
             $this->service->remove($advert->id);
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());

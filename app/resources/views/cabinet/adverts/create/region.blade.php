@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('cabinet.adverts._nav')
+    @include('includes._nav',['page'=>'adverts'])
 
     @if ($region)
         <p>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('cabinet.adverts._nav')
+    @include('includes._nav',['page'=>'adverts'])
 
     {{Form::open(['route'=>(['cabinet.adverts.create.advert.store', 'category'=>$category, 'region'=>$region])])}}
         @csrf

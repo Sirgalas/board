@@ -44,7 +44,7 @@ class AdvertService
             foreach ($category->allAttributes() as $attribute) {
                 $value = $request['attributes'][$attribute->id] ?? null;
                 if (!empty($value)) {
-                    $advert->values()->create([
+                    $advert->values()->make([
                         'attribute_id' => $attribute->id,
                         'value' => $value,
                     ]);

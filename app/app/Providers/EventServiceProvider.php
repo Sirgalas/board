@@ -11,12 +11,16 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Event' => [
             'App\Listeners\EventListener',
         ],
+        'App\Events\Adverts\Create'=>[
+            'App\Listener\Adverts\CreateListener'
+        ],
+        'App\Events\Adverts\Remove'=>[
+            'App\Listener\Adverts\RemoveListener'
+        ]
     ];
 
     public function boot()
     {
         parent::boot();
-
-        //
     }
 }
