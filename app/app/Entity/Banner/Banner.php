@@ -53,6 +53,8 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static Builder|Banner whereUserId($value)
  * @method static Builder|Banner whereViews($value)
  * @mixin \Eloquent
+ * @property-read mixed $classes
+ * @property-read mixed $statuses
  */
 class Banner extends Model
 {
@@ -78,6 +80,15 @@ class Banner extends Model
         self::STATUS_ORDERED => 'Payment',
         self::STATUS_ACTIVE => 'Active',
         self::STATUS_CLOSED => 'Closed',
+    ];
+
+    public static $statusClasses=[
+        self::STATUS_DRAFT=>'secondary',
+        self::STATUS_MODERATION=>'danger',
+        self::STATUS_MODERATED => 'primary',
+        self::STATUS_ORDERED => 'success',
+        self::STATUS_ACTIVE=>'success',
+        self::STATUS_CLOSED=>'danger',
     ];
 
     public static $formatsList=[
@@ -241,5 +252,15 @@ class Banner extends Model
         if (!$this->isActive()) {
             throw new \DomainException('Banner is not active.');
         }
+    }
+
+    public function getClassesAttribute()
+    {
+        return self::$statusClasses[$this->status];
+    }
+
+    public function getStatusesAttribute()
+    {
+        return self::$statusesList[$this->status];
     }
 }

@@ -43,12 +43,7 @@ class CreateController extends Controller
     public function store(CreateRequest $request, Category $category, Region $region = null)
     {
         try {
-            $banner = $this->service->create(
-                Auth::user(),
-                $category,
-                $region,
-                $request
-            );
+            $banner = $this->service->create(Auth::user(), $category, $region, $request);
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }

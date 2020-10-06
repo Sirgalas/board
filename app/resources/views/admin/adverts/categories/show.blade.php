@@ -5,11 +5,11 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <a href="{{ route('admin.adverts.categories.edit', $category) }}" class="btn btn-primary mr-1">Редактировать</a>
-            <form method="POST" action="{{ route('admin.adverts.categories.destroy', $category) }}" class="mr-1">
+            {{Form::open(["route"=>['admin.adverts.categories.destroy', $category],'method'=>'POST',"class"=>"mr-1"])}}
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-danger">Удалить</button>
-            </form>
+                {{Form::submit('Удалить',['class'=>"btn btn-danger"])}}
+            {{Form::close()}}
         </div>
         <div class="card-body">
             <div class="table-responsive">

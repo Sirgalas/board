@@ -1,3 +1,10 @@
+@php
+    {{
+        /**
+        * @var $advert \App\Entity\Adverts\Advert\Advert        **/
+        }}
+@endphp
+
 @extends('admin.layouts.main')
 
 @section('content')
