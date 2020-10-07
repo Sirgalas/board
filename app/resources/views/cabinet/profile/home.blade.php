@@ -1,3 +1,11 @@
+@php
+{{
+    /**
+    * @var $user \App\Entity\User
+    */
+}}
+@endphp
+
 @extends('layouts.app')
 
 @section('content')
@@ -26,7 +34,7 @@
                         <i>(is not verified)</i><br />
                         {{Form::open(['route'=>('cabinet.profile.phone')])}}
                             {{Form::token()}}
-                            <button type="submit" class="btn btn-sm btn-success">Verify</button>
+                            {{Form::submit('Подтвердить',['class'=>'btn btn-sm btn-success'])}}
                         {{Form::close()}}
                     @endif
                 @endif
@@ -34,15 +42,16 @@
         </tr>
         @if ($user->phone)
             <tr>
-                <th>Two Factor Auth</th><td>
-                    <form method="POST" action="{{ route('cabinet.profile.phone.auth') }}">
+                <th>Two Factor Auth</th>
+                <td>
+                    {{Form::open(['route'=>['cabinet.profile.phone.auth'],'method'=>'POST'])}}
                         @csrf
                         @if ($user->isPhoneAuthEnabled())
-                            <button type="submit" class="btn btn-sm btn-success">On</button>
+                            {{Form::submit('Включить',['class'=>'btn btn-sm btn-success'])}}
                         @else
-                            <button type="submit" class="btn btn-sm btn-danger">Off</button>
+                            {{Form::submit('Выключить',['class'=>'btn btn-sm btn-danger'])}}
                         @endif
-                    </form>
+                    {{Form::close()}}
                 </td>
             </tr>
         @endif

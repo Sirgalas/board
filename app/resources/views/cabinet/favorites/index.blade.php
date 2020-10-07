@@ -1,3 +1,10 @@
+@php
+{{
+    /**
+    * @var $adverts \App\Entity\Adverts\Advert\Advert[]
+    */
+}}
+@endphp
 @extends('layouts.app')
 
 @section('content')
@@ -15,7 +22,6 @@
         </tr>
         </thead>
         <tbody>
-
         @foreach ($adverts as $advert)
             <tr>
                 <td>{{ $advert->id }}</td>
@@ -28,17 +34,14 @@
                 </td>
                 <td>{{ $advert->category->name }}</td>
                 <td>
-                    <form method="POST" action="{{ route('cabinet.favorites.remove', $advert) }}" class="mr-1">
-                        @csrf
+                    {{Form::open(['route'=>['cabinet.favorites.remove', $advert],'method'=>'Post','class'=>'mr-1'])}}
                         @method('DELETE')
-                        <button class="btn btn-sm btn-danger"><span class="fa fa-remove"></span> Remove</button>
-                    </form>
+                        {{Form::submit('<span class="fa fa-remove"></span> Удалить',['class'=>'btn btn-sm btn-danger'])}}
+                    {{Form::close()}}
                 </td>
             </tr>
         @endforeach
-
         </tbody>
     </table>
-
     {{ $adverts->links() }}
 @endsection 

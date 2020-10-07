@@ -1,3 +1,11 @@
+@php
+{{
+    /**
+    * @var $categories \App\Entity\Adverts\Category[]
+    * @var $region \App\Entity\Region[]
+    */
+}}
+@endphp
 @extends('layouts.app')
 
 @section('breadcrumbs', '')

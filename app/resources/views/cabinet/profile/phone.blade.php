@@ -1,11 +1,16 @@
+@php
+{{
+    /**
+    * @var $user \App\Entity\User
+    */
+}}
+@endphp
+
 @extends('layouts.app')
 
 @section('content')
     @include('includes._nav',['page'=>'profile'])
-
-    <form method="POST" action="{{ route('cabinet.profile.phone.verify') }}">
     {{Form::open(['route'=>('cabinet.profile.phone.verify')])}}
-    {{Form::token()}}
         @method('PUT')
 
         <div class="form-group">
@@ -28,7 +33,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Verify</button>
+            {{Form::submit('Подтвердит',['class'=>'btn btn-primary'])}}
         </div>
     {{Form::close()}}
 @endsection 

@@ -1,3 +1,10 @@
+@php
+{{
+    /**
+    * @var $category \App\Entity\Adverts\Category
+    */
+}}
+@endphp
 <div class="search-bar pt-3">
     <div class="container">
         <div class="row">
@@ -53,7 +60,10 @@
                 {{Form::close()}}
             </div>
             <div class="col-md-3" style="text-align: right">
-                <p><a href="{{ route('cabinet.adverts.create') }}" class="btn btn-success"><span class="fa fa-plus"></span> Add New Advertisement</a></p>
+                <p>
+                    <a href="{{ route('cabinet.adverts.create') }}" class="btn btn-success">
+                        <span class="fa fa-plus"></span> Добавить Новое Объявление</a>
+                </p>
             </div>
         </div>
     </div>
