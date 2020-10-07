@@ -1,3 +1,10 @@
+@php
+{{
+    /**
+    * @var $regions \App\Entity\Region[]
+    */
+}}
+@endphp
 @extends('layouts.app')
 
 @section('content')

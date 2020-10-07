@@ -1,11 +1,16 @@
+@php
+{{
+    /**
+    * @var $category \App\Entity\Adverts\Category
+    */
+}}
+@endphp
 @extends('layouts.app')
 
 @section('content')
     @include('includes._nav',['page'=>'adverts'])
-
     {{Form::open(['route'=>(['cabinet.adverts.create.advert.store', 'category'=>$category, 'region'=>$region])])}}
         @csrf
-
         <div class="card mb-3">
             <div class="card-header">
                 Common
@@ -47,19 +52,15 @@
                 </div>
             </div>
         </div>
-
         <div class="card mb-3">
             <div class="card-header">
                 Characteristics
             </div>
             <div class="card-body pb-2">
                 @foreach ($category->allAttributes() as $attribute)
-
                     <div class="form-group">
                         <label for=attribute_{{ $attribute->id }}" class="col-form-label">{{ $attribute->name }}</label>
-
                         @if ($attribute->isSelect())
-
                             <select id="attribute_{{ $attribute->id }}" class="form-control{{ $errors->has('attributes.' . $attribute->id) ? ' is-invalid' : '' }}" name="attributes[{{ $attribute->id }}]">
                                 <option value=""></option>
                                 @foreach ($attribute->variants as $variant)
@@ -68,29 +69,20 @@
                                     </option>
                                 @endforeach
                             </select>
-
                         @elseif ($attribute->isNumber())
-
                             <input id="attribute_{{ $attribute->id }}" type="number" class="form-control{{ $errors->has('attributes.' . $attribute->id) ? ' is-invalid' : '' }}" name="attributes[{{ $attribute->id }}]" value="{{ old('attributes.' . $attribute->id) }}">
-
                         @else
-
                             <input id="attribute_{{ $attribute->id }}" type="text" class="form-control{{ $errors->has('attributes.' . $attribute->id) ? ' is-invalid' : '' }}" name="attributes[{{ $attribute->id }}]" value="{{ old('attributes.' . $attribute->id) }}">
-
                         @endif
-
                         @if ($errors->has('parent'))
                             <span class="invalid-feedback"><strong>{{ $errors->first('attributes.' . $attribute->id) }}</strong></span>
                         @endif
                     </div>
-
                 @endforeach
             </div>
         </div>
-
         <div class="form-group">
             {{Form::submit('Сохранить',["class"=>"btn btn-primary"])}}
         </div>
     {{Form::close()}}
-
 @endsection 

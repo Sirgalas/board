@@ -1,3 +1,11 @@
+@php
+{{
+    /**
+    * @var $regions \App\Entity\Region[]
+    */
+}}
+@endphp
+
 <table class="table table-bordered table-striped">
     <thead>
     <tr>

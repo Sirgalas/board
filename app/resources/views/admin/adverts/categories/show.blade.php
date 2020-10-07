@@ -1,3 +1,12 @@
+@php
+    {{
+        /**
+            * @var $category App\Entity\Adverts\Category
+            * @var $parentAttributes \App\Entity\Adverts\Attribute[]
+            * @var $attributes \App\Entity\Adverts\Attribute[]
+        **/
+    }}
+@endphp
 @extends('admin.layouts.main')
 
 @section('content')

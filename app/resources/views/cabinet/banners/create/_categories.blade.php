@@ -1,3 +1,10 @@
+@php
+    {{
+        /**
+        * @var $categories App\Entity\Adverts\Category[]
+        */
+    }}
+@endphp
 <ul>
     @foreach($categories as $category)
         <li>

@@ -1,3 +1,10 @@
+@php
+    {{
+        /**
+            * @var $category App\Entity\Adverts\Category
+        **/
+    }}
+@endphp
 @extends('admin.layouts.main')
 
 @section('content')
@@ -6,9 +13,8 @@
         <div class="card-header py-3">
             <a href="{{ route() }}" class="btn btn-primary mr-1">Edit</a>
             {{Form::open(['route'=>['admin.adverts.categories.attributes.edit', [$category, $attribute]],'class'=>"mr-1",'method'=>'post'])}}
-                @csrf
                 @method('DELETE')
-                <button class="btn btn-danger">Delete</button>
+                {{Form::submit('Удалить',['class'=>"btn btn-danger"])}}
             {{Form::close()}}
         </div>
         <div class="card-body">

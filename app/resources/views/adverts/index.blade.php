@@ -1,3 +1,12 @@
+@php
+    {{
+        /**
+        * @var $category \App\Entity\Adverts\Category
+        * @var $region \App\Entity\Region
+        * @var $adverts \App\Entity\Adverts\Advert\Advert[]
+        */
+    }}
+@endphp
 @extends('layouts.app')
 
 @section('search')
@@ -62,7 +71,6 @@
 
     <div class="row">
         <div class="col-md-9">
-
             <div class="adverts-list">
                 @foreach ($adverts as $advert)
                     <div class="advert">
@@ -81,7 +89,6 @@
                     </div>
                 @endforeach
             </div>
-
             {{ $adverts->links() }}
         </div>
         <div class="col-md-3">

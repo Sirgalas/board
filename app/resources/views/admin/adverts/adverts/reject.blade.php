@@ -1,14 +1,14 @@
 @php
     {{
         /**
-        * @var $advert \App\Entity\Adverts\Advert\Advert        **/
-        }}
+        * @var $advert \App\Entity\Adverts\Advert\Advert
+        **/
+    }}
 @endphp
 
 @extends('admin.layouts.main')
 
 @section('content')
-
 
     {{
         Form::open([
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Reject</button>
+            {{Form::submit('Отменить',["class"=>"btn btn-primary"])}}
         </div>
     {{Form::close()}}
 

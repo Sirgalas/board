@@ -1,3 +1,10 @@
+@php
+{{
+    /**
+    * @var $banners \App\Entity\Banner\Banner[]
+    */
+}}
+@endphp
 @extends('admin.layouts.main')
 
 @section('content')
@@ -85,23 +92,10 @@
                         </td>
                         <td>{{ $banner->category->id }} - {{ $banner->category->name }}</td>
                         <td>
-                            @if ($banner->isDraft())
-                                <span class="badge badge-secondary">Draft</span>
-                            @elseif ($banner->isOnModeration())
-                                <span class="badge badge-primary">Moderation</span>
-                            @elseif ($banner->isModerated())
-                                <span class="badge badge-success">Ready to Payment</span>
-                            @elseif ($banner->isOrdered())
-                                <span class="badge badge-warning">Waiting for Payment</span>
-                            @elseif ($banner->isActive())
-                                <span class="badge badge-primary">Active</span>
-                            @elseif ($banner->isClosed())
-                                <span class="badge badge-secondary">Closed</span>
-                            @endif
+                            <span class="badge badge-{{$banner->classes}}">{{$banner->statuses}}</span>
                         </td>
                     </tr>
                 @endforeach
-
                 </tbody>
             </table>
         </div>

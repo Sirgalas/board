@@ -1,5 +1,9 @@
 @php
-use App\Entity\Adverts\Advert\Advert
+{{
+    /**
+    * @var $adverts \App\Entity\Adverts\Advert\Advert[]
+    */
+}}
 @endphp
 
 @extends('layouts.app')
@@ -19,7 +23,6 @@ use App\Entity\Adverts\Advert\Advert
         </tr>
         </thead>
         <tbody>
-
         @foreach ($adverts as $advert)
             <tr>
                 <td>{{ $advert->id }}</td>
@@ -35,9 +38,7 @@ use App\Entity\Adverts\Advert\Advert
                 </td>
             </tr>
         @endforeach
-
         </tbody>
     </table>
-
     {{ $adverts->links() }}
 @endsection 

@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    {{Form::submit('Сохранить',["class"=>"btn btn-primary"])}}
                 </div>
             <?= Form::close(); ?>
         </div>

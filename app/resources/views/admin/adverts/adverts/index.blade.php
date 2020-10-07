@@ -1,8 +1,9 @@
 @php
     {{
         /**
-        * @var $adverts \App\Entity\Adverts\Advert\Advert[]        **/
-        }}
+            * @var $adverts \App\Entity\Adverts\Advert\Advert[]
+        **/
+    }}
 @endphp
 @extends('admin.layouts.main')
 

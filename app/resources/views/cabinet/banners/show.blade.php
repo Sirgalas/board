@@ -19,32 +19,28 @@
         @endif
 
         @if ($banner->isDraft())
-            <form method="POST" action="{{ route('cabinet.banners.send', $banner) }}" class="mr-1">
-                @csrf
-                <button class="btn btn-success">Send to Moderation</button>
-            </form>
+            {{Form::open(['route'=>['cabinet.banners.send', $banner],'method'=>'POST','class'=>'mr-1'])}}
+                {{Form::submit('Отправить на модерацию',["class"=>"btn btn-secondary"])}}
+            {{Form::close()}}
         @endif
 
         @if ($banner->isOnModeration())
-            <form method="POST" action="{{ route('cabinet.banners.cancel', $banner) }}" class="mr-1">
-                @csrf
-                <button class="btn btn-secondary">Cancel Moderation</button>
-            </form>
+            {{Form::open(['route'=>['cabinet.banners.cancel', $banner],'method'=>'POST','class'=>'mr-1'])}}
+                {{Form::submit('Отозвать с модерации',["class"=>"btn btn-secondary"])}}
+            {{Form::close()}}
         @endif
 
         @if ($banner->isModerated())
-            <form method="POST" action="{{ route('cabinet.banners.order', $banner) }}" class="mr-1">
-                @csrf
-                <button class="btn btn-success">Order for Payment</button>
-            </form>
+            {{Form::open(['route'=>['cabinet.banners.order', $banner],'method'=>'POST','class'=>'mr-1'])}}
+                {{Form::submit('Платежное поручение',["class"=>"btn btn-secondary"])}}
+            {{Form::close()}}
         @endif
 
         @if ($banner->canBeRemoved())
-            <form method="POST" action="{{ route('cabinet.banners.destroy', $banner) }}" class="mr-1">
-                @csrf
+            {{Form::open(['route'=>['cabinet.banners.destroy', $banner],'method'=>'POST','class'=>'mr-1'])}}
                 @method('DELETE')
-                <button class="btn btn-danger">Delete</button>
-            </form>
+                {{Form::submit('Удалить',["class"=>"btn btn-secondary"])}}
+            {{Form::close()}}
         @endif
     </div>
 

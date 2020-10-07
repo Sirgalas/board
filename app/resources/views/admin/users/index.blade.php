@@ -1,3 +1,11 @@
+@php
+    {{
+        /**
+        * @var $users \App\Entity\User[]
+        */
+    }}
+@endphp
+
 @extends('admin.layouts.main')
 
 @section('content')

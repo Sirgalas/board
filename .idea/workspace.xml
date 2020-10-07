@@ -26,26 +26,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/resources/views/admin/banners/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/banner/get.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/_categories.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/banner.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/category.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/region.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/file.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/Banner/Banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Banner/Banner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Banners/CreateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/Banners/CreateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/UseCases/Banner/BannerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/UseCases/Banner/BannerService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/adverts/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/adverts/reject.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/adverts/reject.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/attributes/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/adverts/categories/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/banners/reject.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/banners/reject.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/banners/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/banners/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/banners/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/banners/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/regions/_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/regions/_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/regions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/regions/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/regions/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/regions/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/regions/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/regions/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/users/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/adverts/edit/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/adverts/edit/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/views/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/adverts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/includes/_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/includes/_nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/adverts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/adverts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/banner/get.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/banner/get.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/advert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/advert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/region.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/create/region.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/adverts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/_categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/_categories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/banner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/region.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/create/region.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/banners/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/banners/file.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/file.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/banners/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/banners/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,6 +389,7 @@
       <workItem from="1601961823105" duration="3823000" />
       <workItem from="1601970771374" duration="5668000" />
       <workItem from="1602004113258" duration="3302000" />
+      <workItem from="1602046432533" duration="5547000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>

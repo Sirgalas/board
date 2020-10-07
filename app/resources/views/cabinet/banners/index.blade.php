@@ -3,7 +3,7 @@
         /**
         * @var $banners \App\Entity\Banner\Banner[]
         **/
-        }}
+    }}
 @endphp
 @extends('layouts.app')
 
