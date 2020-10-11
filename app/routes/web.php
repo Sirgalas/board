@@ -22,6 +22,7 @@ Route::get('/verify/{token}', 'Auth\RegisterController@verify')->name('register.
 
 Route::get('/banner/get', 'BannerController@get')->name('banner.get');
 Route::get('/banner/{banner}/click', 'BannerController@click')->name('banner.click');
+Route::get('/payment/result','PaymentController@result')->name('payment.result');
 
 Route::group([
     'prefix' => 'adverts',

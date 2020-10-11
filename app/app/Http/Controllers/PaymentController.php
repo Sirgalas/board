@@ -4,20 +4,31 @@ namespace App\Http\Controllers;
 
 use App\Entity\Banner\Banner;
 use App\Http\Requests\Payment\PaymentRequest;
+use App\UseCases\Banner\BannerService;
+use App\UseCases\Payment\PaymentInterface;
+use App\UseCases\Payment\Payments;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
+/**
+ * Class PaymentController
+ * @package App\Http\Controllers
+ * @property PaymentInterface $classes
+ */
 class PaymentController extends Controller
 {
+    private $config;
+    private $classes;
+
+    public function __construct()
+    {
+        $this->config = app('config')->get('payment');
+        $this->classes=Payments::$paymentClass[$this->config['class']];
+    }
+
     public function result(PaymentRequest $request)
     {
-        $password2 = 'dsf234234da';
-
-        $crc = strtoupper($request->SignatureValue);
-
-        $my_crc = strtoupper(md5("$request->OutSum:$request->InvId:$password2:Shp_item=$request->Shp_item"));
-
-        if ($my_crc !== $crc) {
+        if (!$this->classes->payments( $request)) {
             return 'bad sign';
         }
 

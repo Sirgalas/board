@@ -11,6 +11,10 @@ use App\Entity\Region;
 /**
  * @property Category $category
  * @property Region $region
+ * @property string $title
+ * @@property string $content
+ * @property int $price
+ * @property string $address
  */
 class CreateRequest extends FormRequest
 {

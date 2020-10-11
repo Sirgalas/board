@@ -28,10 +28,10 @@ class AdvertService
             /** @var Advert $advert */
 
             $advert = Advert::make([
-                'title' => $request['title'],
-                'content' => $request['content'],
-                'price' => $request['price'],
-                'address' => $request['address'],
+                'title' => $request->title,
+                'content' => $request->content,
+                'price' => $request->price,
+                'address' => $request->address,
                 'status' => Advert::STATUS_DRAFT,
             ]);
 

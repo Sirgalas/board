@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Cabinet\Banners;
 
 use App\Http\Controllers\Controller;
+use App\UseCases\Payment\PaymentInterface;
+use App\UseCases\Payment\Payments;
 use Illuminate\Http\Request;
 use App\Entity\Banner\Banner;
 use App\Http\Requests\Banner\EditRequest;
@@ -11,15 +13,22 @@ use App\UseCases\Banner\BannerService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 
-
-
+/**
+ * Class BannerController
+ * @package App\Http\Controllers\Cabinet\Banners
+ * @property PaymentInterface $classes
+ */
 class BannerController extends Controller
 {
     private $service;
+    private $config;
+    private $classes;
 
     public function __construct(BannerService $service)
     {
         $this->service = $service;
+        $this->config = app('config')->get('payment');
+        $this->classes=Payments::$paymentClass[$this->config['class']];
     }
 
     public function index()
@@ -106,7 +115,7 @@ class BannerController extends Controller
         $this->checkAccess($banner);
         try {
             $banner = $this->service->order($banner->id);
-            $url = $this->robokassa->generateRedirectUrl($banner->id, $banner->cost, 'banner');
+            $url = $this->classes->generateRedirectUrl($banner, 1,'banner');
             return redirect($url);
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
