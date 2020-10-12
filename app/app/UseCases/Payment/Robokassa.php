@@ -17,14 +17,14 @@ class Robokassa implements PaymentInterface
         $this->config=app('config')->get('payment');
     }
 
-    public function generateRedirectUrl(Banner $banner,bool $test,string $shpItem):string
+    public function generateRedirectUrl(Banner $banner,bool $test,string $shpItem,array $config):string
     {
         if($this->config['local']){
             return url('payment.result');
         }
 
-            $login = $this->config['login'];
-            $password1 = $this->config['pass1'];
+            $login = $config['login'];
+            $password1 = $config['pass1'];
             $invId = $banner->id;
             $outSum = $banner->cost;
             $signature = md5("$login:$outSum:$invId:$password1:Shp_item=$shpItem");
@@ -41,12 +41,12 @@ class Robokassa implements PaymentInterface
             return $this->config['url'] . $query;
     }
 
-    public function payments(PaymentRequest $request):bool
+    public function payments(PaymentRequest $request,array $config):bool
     {
-        if($this->config['local']){
+        if($config['local']){
             return true;
         }
-        $password2 = $this->config['pass2'];
+        $password2 = $config['pass2'];
 
         $crc = strtoupper($request->SignatureValue);
 

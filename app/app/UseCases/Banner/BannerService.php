@@ -33,7 +33,6 @@ class BannerService
     {
         $response = $this->client->search([
             'index' => 'banners',
-            'type' => 'banner',
             'body' => [
                 '_source' => ['id'],
                 'size' => 5,
@@ -60,11 +59,15 @@ class BannerService
         if (!$ids = array_column($response['hits']['hits'], '_id')) {
             return null;
         }
-
+        $when='case';
+        for ($i=0; $i<count($ids);$i++){
+            $when.=' when( id ='.$ids[$i].') then '.$i.'';
+        }
+        $when.='else '.array_key_last($ids).' end';
         $banner = Banner::active()
             ->with(['category', 'region'])
             ->whereIn('id', $ids)
-            ->orderByRaw('FIELD(id,' . implode(',', $ids) . ')')
+            ->orderByRaw($when)
             ->first();
 
         if (!$banner) {

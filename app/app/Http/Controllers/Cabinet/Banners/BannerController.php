@@ -115,7 +115,7 @@ class BannerController extends Controller
         $this->checkAccess($banner);
         try {
             $banner = $this->service->order($banner->id);
-            $url = $this->classes->generateRedirectUrl($banner, 1,'banner');
+            $url = $this->classes->generateRedirectUrl($banner, 1,'banner',$this->config);
             return redirect($url);
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());

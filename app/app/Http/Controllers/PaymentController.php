@@ -28,7 +28,7 @@ class PaymentController extends Controller
 
     public function result(PaymentRequest $request)
     {
-        if (!$this->classes->payments( $request)) {
+        if (!$this->classes->payments($request,$this->config)) {
             return 'bad sign';
         }
 

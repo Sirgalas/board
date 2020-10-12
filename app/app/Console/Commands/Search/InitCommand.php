@@ -40,7 +40,6 @@ class InitCommand extends Command
             'index' => 'adverts',
             'body' => [
                 'mappings' => [
-                    /*'adverts' => [*/
                         '_source' => [
                             'enabled' => true,
                         ],
@@ -85,7 +84,6 @@ class InitCommand extends Command
                             ],
                         ],
                     ],
-                /*],*/
                 'settings' => [
                     'analysis' => [
                         'char_filter' => [

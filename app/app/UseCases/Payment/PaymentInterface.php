@@ -9,7 +9,7 @@ use App\Http\Requests\Payment\PaymentRequest;
 
 interface PaymentInterface
 {
-    public function generateRedirectUrl(Banner $banner,bool $test,string $shpItem):string;
+    public function generateRedirectUrl(Banner $banner,bool $test,string $shpItem,array $config):string;
 
-    public function payments(PaymentRequest $request):bool;
+    public function payments(PaymentRequest $request,array $config):bool;
 }
