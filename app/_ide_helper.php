@@ -1695,7 +1695,7 @@
                     /**
          * Get the currently authenticated user.
          *
-         * @return \App\Entity\User|null 
+         * @return \App\Entity\User\User|null
          * @static 
          */ 
         public static function user()
@@ -1730,7 +1730,7 @@
          * Log the given user ID into the application without sessions or cookies.
          *
          * @param mixed $id
-         * @return \App\Entity\User|false 
+         * @return \App\Entity\User\User|false
          * @static 
          */ 
         public static function onceUsingId($id)
@@ -1794,7 +1794,7 @@
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \App\Entity\User|false 
+         * @return \App\Entity\User\User|false
          * @static 
          */ 
         public static function loginUsingId($id, $remember = false)
@@ -1867,7 +1867,7 @@
                     /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \App\Entity\User 
+         * @return \App\Entity\User\User
          * @static 
          */ 
         public static function getLastAttempted()
@@ -1969,7 +1969,7 @@
                     /**
          * Return the currently cached user.
          *
-         * @return \App\Entity\User|null 
+         * @return \App\Entity\User\User|null
          * @static 
          */ 
         public static function getUser()
@@ -2015,7 +2015,7 @@
                     /**
          * Determine if current user is authenticated. If not, throw an exception.
          *
-         * @return \App\Entity\User 
+         * @return \App\Entity\User\User
          * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 

@@ -10,7 +10,7 @@ use App\Http\Search\Admin\AdvertsSearch;
 use App\UseCases\Adverts\AdvertService;
 use Illuminate\Http\Request;
 use App\Entity\Adverts\Advert\Advert;
-use App\Entity\User;
+use App\Entity\User\User;
 use App\Http\Requests\Adverts\PhotoRequest;
 use App\Http\Requests\Adverts\RejectRequest;
 

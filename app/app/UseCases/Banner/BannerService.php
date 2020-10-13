@@ -7,7 +7,7 @@ namespace App\UseCases\Banner;
 use App\Entity\Adverts\Category;
 use App\Entity\Banner\Banner;
 use App\Entity\Region;
-use App\Entity\User;
+use App\Entity\User\User;
 use App\Http\Requests\Banner\CreateRequest;
 use App\Http\Requests\Banner\EditRequest;
 use App\Http\Requests\Banner\FileRequest;
@@ -48,7 +48,7 @@ class BannerService
                         'must' => [
                             ['term' => ['status' => Banner::STATUS_ACTIVE]],
                             ['term' => ['format' => $format ?: '']],
-                            ['term' => ['categories' => [$categoryId, 0] ?: 0]],
+                            ['term' => ['categories' => $categoryId ?: 0]],
                             ['term' => ['regions' => $regionId ?: 0]],
                         ],
                     ],

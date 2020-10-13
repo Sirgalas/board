@@ -5,7 +5,7 @@ namespace App\Entity\Adverts\Advert;
 use App\Entity\Adverts\Attribute;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use App\Entity\User;
+use App\Entity\User\User;
 use App\Entity\Adverts\Category;
 use App\Entity\Region;
 use Illuminate\Database\Eloquent\Builder;
@@ -38,7 +38,7 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static Builder|Advert active()
  * @method static Builder|Advert forCategory(\App\Entity\Adverts\Category $category)
  * @method static Builder|Advert forRegion(\App\Entity\Region $region)
- * @method static Builder|Advert forUser(\App\Entity\User $user)
+ * @method static Builder|Advert forUser(\App\Entity\User\User $user)
  * @method static Builder|Advert newModelQuery()
  * @method static Builder|Advert newQuery()
  * @method static Builder|Advert query()
@@ -60,7 +60,7 @@ use Illuminate\Database\Eloquent\Builder;
  * @property-read \Illuminate\Database\Eloquent\Collection|User[] $favorites
  * @property-read int|null $favorites_count
  * @property-read mixed $statuses
- * @method static Builder|Advert favoredByUser(\App\Entity\User $user)
+ * @method static Builder|Advert favoredByUser(\App\Entity\User\User $user)
  */
 class Advert extends Model
 {

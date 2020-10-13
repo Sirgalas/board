@@ -8,7 +8,7 @@ use App\Entity\Adverts\Category;
 use App\Entity\Region;
 use App\Http\Requests\Adverts\AttributesRequest;
 use App\Http\Requests\Adverts\CreateRequest;
-use App\Entity\User;
+use App\Entity\User\User;
 use App\Entity\Adverts\Advert\Advert;
 use App\Http\Requests\Adverts\EditRequest;
 use App\Http\Requests\Adverts\PhotoRequest;

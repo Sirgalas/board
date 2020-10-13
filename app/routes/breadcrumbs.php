@@ -1,6 +1,6 @@
 <?php
 
-use App\Entity\User;
+use App\Entity\User\User;
 use App\Entity\Adverts\Category;
 use App\Entity\Region;
 use App\Entity\Adverts\Attribute;

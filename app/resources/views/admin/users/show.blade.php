@@ -1,7 +1,7 @@
 @php
     {{
         /**
-        *   @var $user \App\Entity\User
+        *   @var $user \App\Entity\User\User
         */
     }}
 @endphp

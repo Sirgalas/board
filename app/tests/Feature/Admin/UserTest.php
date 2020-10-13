@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Admin;
 
-use App\Entity\User;
+use App\Entity\User\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;

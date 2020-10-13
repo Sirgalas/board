@@ -5,7 +5,7 @@ namespace App\Entity\Banner;
 use Illuminate\Database\Eloquent\Model;
 use App\Entity\Adverts\Category;
 use App\Entity\Region;
-use App\Entity\User;
+use App\Entity\User\User;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -32,7 +32,7 @@ use Illuminate\Database\Eloquent\Builder;
  * @property-read Region|null $region
  * @property-read User $user
  * @method static Builder|Banner active()
- * @method static Builder|Banner forUser(\App\Entity\User $user)
+ * @method static Builder|Banner forUser(\App\Entity\User\User $user)
  * @method static Builder|Banner newModelQuery()
  * @method static Builder|Banner newQuery()
  * @method static Builder|Banner query()

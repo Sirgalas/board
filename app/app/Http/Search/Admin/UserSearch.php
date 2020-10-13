@@ -4,7 +4,7 @@
 namespace App\Http\Search\Admin;
 
 
-use App\Entity\User;
+use App\Entity\User\User;
 use App\Http\Requests\Admin\Users\SearchRequest;
 
 class UserSearch
