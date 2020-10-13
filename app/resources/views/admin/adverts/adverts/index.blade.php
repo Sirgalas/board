@@ -16,31 +16,31 @@
                     <thead>
                     <tr>
                         {{Form::open(['route'=>['admin.adverts.adverts.index'],'method'=>'GET','id'=>'search_form'])}}
-                        <th>
-                            <label for="id" class="col-form-label">ID</label>
-                            {{Form::text('id',request('id'),["class"=> "form-control", 'placeholder'=>"id", "id"=>"id"])}}
-                        </th>
-                        <th><label for="name" class="col-form-label">Updated</label></th>
-                        <th>
-                            <label for="name" class="col-form-label">Title</label>
-                            {{Form::text('name',request('name'),["class"=> "form-control", 'placeholder'=>"name", "id"=>"name"])}}
-                        </th>
-                        <th>
-                            <label for="user" class="col-form-label">User</label>
-                            {{Form::text('user',request('user'),["class"=> "form-control", 'placeholder'=>"user", "id"=>"user"])}}
-                        </th>
-                        <th>
-                            <label for="region" class="col-form-label">Region</label>
-                            {{Form::text('region',request('region'),["class"=> "form-control", 'placeholder'=>"region", "id"=>"region"])}}
-                        </th>
-                        <th>
-                            <label for="category" class="col-form-label">Category</label>
-                            {{Form::text('category',request('category'),["class"=> "form-control", 'placeholder'=>"category", "id"=>"category"])}}
-                        </th>
-                        <th>
-                            <label for="status" class="col-form-label">Статус</label>
-                            <?= Form::select('status',$statuses, request('status'),["id"=>"status","class"=> "form-control"]); ?>
-                        </th>
+                            <th>
+                                <label for="id" class="col-form-label">ID</label>
+                                {{Form::text('id',request('id'),["class"=> "form-control", 'placeholder'=>"id", "id"=>"id"])}}
+                            </th>
+                            <th><label for="name" class="col-form-label">Updated</label></th>
+                            <th>
+                                <label for="name" class="col-form-label">Title</label>
+                                {{Form::text('name',request('name'),["class"=> "form-control", 'placeholder'=>"name", "id"=>"name"])}}
+                            </th>
+                            <th>
+                                <label for="user" class="col-form-label">User</label>
+                                {{Form::text('user',request('user'),["class"=> "form-control", 'placeholder'=>"user", "id"=>"user"])}}
+                            </th>
+                            <th>
+                                <label for="region" class="col-form-label">Region</label>
+                                {{Form::text('region',request('region'),["class"=> "form-control", 'placeholder'=>"region", "id"=>"region"])}}
+                            </th>
+                            <th>
+                                <label for="category" class="col-form-label">Category</label>
+                                {{Form::text('category',request('category'),["class"=> "form-control", 'placeholder'=>"category", "id"=>"category"])}}
+                            </th>
+                            <th>
+                                <label for="status" class="col-form-label">Статус</label>
+                                <?= Form::select('status',$statuses, request('status'),["id"=>"status","class"=> "form-control"]); ?>
+                            </th>
                         {{Form::close()}}
                     </tr>
                     </thead>

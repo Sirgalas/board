@@ -28,7 +28,6 @@ class SearchService
 
         $response = $this->client->search([
             'index' => 'adverts',
-            //'type' => 'advert',
             'body' => [
                 '_source' => ['id'],
                 'from' => ($page - 1) * $perPage,
@@ -57,8 +56,8 @@ class SearchService
                             array_filter([
                                 $category ? ['term' => ['categories' => $category->id]] : false,
                                 $region ? ['term' => ['regions' => $region->id]] : false,
-                                !empty($request['text']) ? ['multi_match' => [
-                                    'query' => $request['text'],
+                                !empty($request->text) ? ['multi_match' => [
+                                    'query' => $request->text,
                                     'fields' => [ 'title^3', 'content' ]
                                 ]] : false,
                             ]),

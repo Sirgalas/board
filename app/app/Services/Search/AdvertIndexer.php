@@ -20,7 +20,6 @@ class AdvertIndexer
     {
         $this->client->deleteByQuery([
             'index' => 'adverts',
-            //'type' => 'advert',
             'body' => [
                 'query' => [
                     'match_all' => new \stdClass(),
@@ -39,7 +38,6 @@ class AdvertIndexer
         }
         $this->client->index([
             'index' => 'adverts',
-            //'type' => 'advert',
             'id' => $advert->id,
             'body' => [
                 'id' => $advert->id,
@@ -68,7 +66,6 @@ class AdvertIndexer
     {
         $this->client->delete([
             'index' => 'adverts',
-            //'type' => 'advert',
             'id' => $advert->id,
         ]);
     }

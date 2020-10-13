@@ -6,6 +6,7 @@ namespace App\Http\Search\Admin;
 
 
 use App\Http\Requests\Admin\BannerRequest;
+use App\Entity\Banner\Banner;
 
 class BannerSearch
 {

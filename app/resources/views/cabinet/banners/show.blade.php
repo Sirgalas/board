@@ -8,7 +8,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('cabinet.banners._nav')
+    @include('includes._nav',['page'=>'banner'])
 
 
     <div class="d-flex flex-row mb-3">

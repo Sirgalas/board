@@ -28,11 +28,8 @@ class AdvertController extends Controller
     {
         $region = $path->region;
         $category = $path->category;
-
         $result = $this->search->search($category, $region, $request, 20, $request->get('page', 1));
-
         $adverts = $result->adverts;
-
         $regionsCounts = $result->regionsCounts;
         $categoriesCounts = $result->categoriesCounts;
 
@@ -41,14 +38,15 @@ class AdvertController extends Controller
 
         $query = $category ? $category->children() : Category::whereIsRoot();
         $categories = $query->defaultOrder()->getModels();
-
         $regions = array_filter($regions, function (Region $region) use ($regionsCounts) {
             return isset($regionsCounts[$region->id]) && $regionsCounts[$region->id] > 0;
         });
+        if(!empty($categoriesCounts)){
+            $categories = array_filter($categories, function (Category $category) use ($categoriesCounts) {
+                return isset($categoriesCounts[$category->id]) && $categoriesCounts[$category->id] > 0;
+            });
+        }
 
-        $categories = array_filter($categories, function (Category $category) use ($categoriesCounts) {
-            return isset($categoriesCounts[$category->id]) && $categoriesCounts[$category->id] > 0;
-        });
 
         return view('adverts.index', compact(
             'category', 'region',

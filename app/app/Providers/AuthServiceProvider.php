@@ -6,6 +6,7 @@ use App\Entity\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Entity\Adverts\Advert\Advert;
+use App\Entity\Banner\Banner;
 
 class AuthServiceProvider extends ServiceProvider
 {
