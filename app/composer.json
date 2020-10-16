@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.2.5",
         "davejamesmiller/laravel-breadcrumbs": "5.x",
+        "doctrine/dbal": "^2.10",
         "elasticsearch/elasticsearch": "^7.9",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
@@ -14,6 +15,7 @@
         "kalnoy/nestedset": "^5.0",
         "laravel/framework": "^7.0",
         "laravel/installer": "^3.1",
+        "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
         "laravelcollective/html": "^6.1",

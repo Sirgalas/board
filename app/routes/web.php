@@ -24,6 +24,9 @@ Route::get('/banner/get', 'BannerController@get')->name('banner.get');
 Route::get('/banner/{banner}/click', 'BannerController@click')->name('banner.click');
 Route::get('/payment/result','PaymentController@result')->name('payment.result');
 
+Route::get('/login/{network}', 'Auth\NetworkController@redirect')->name('login.network');
+Route::get('/login/{network}/callback', 'Auth\NetworkController@callback');
+
 Route::group([
     'prefix' => 'adverts',
     'as' => 'adverts.',

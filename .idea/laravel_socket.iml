@@ -33,11 +33,13 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/kalnoy/nestedset" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/installer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravelcollective/html" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth1-client" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/myclabs/deep-copy" />
