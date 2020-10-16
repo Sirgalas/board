@@ -129,6 +129,8 @@
       <path value="$PROJECT_DIR$/app/vendor/react/promise" />
       <path value="$PROJECT_DIR$/app/vendor/ezimuel/guzzlestreams" />
       <path value="$PROJECT_DIR$/app/vendor/ezimuel/ringphp" />
+      <path value="$PROJECT_DIR$/app/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/app/vendor/league/oauth1-client" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
