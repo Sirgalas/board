@@ -26,22 +26,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Entity/User/Network.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Auth/NetworkController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/UseCases/Auth/NetworkService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_10_14_192627_add_network_auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Api/Adverts/AdvertController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Api/Adverts/FavoriteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Api/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Api/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Api/User/AdvertsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Api/User/FavoriteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Api/User/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Cabinet/PhoneVerifyRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Requests/Cabinet/ProfileEditRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Resources/Adverts/AdvertDetailResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Resources/Adverts/AdvertListResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Resources/User/ProfileResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Serializer/UserSerializer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/UseCases/Profile/PhoneService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/UseCases/Profile/ProfileService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_10_16_200807_create_oauth_auth_codes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_10_16_201115_create_oauth_access_tokens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_10_16_201532_create_oauth_refresh_tokens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_10_16_201743_create_oauth_clients_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/laravel_socket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_socket.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Entity/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/PhoneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Cabinet/PhoneController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/UseCases/Auth/RegisterService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/UseCases/Auth/RegisterService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,6 +222,19 @@
       <path value="$PROJECT_DIR$/app/vendor/ezimuel/ringphp" />
       <path value="$PROJECT_DIR$/app/vendor/laravel/socialite" />
       <path value="$PROJECT_DIR$/app/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/app/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/app/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/app/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/app/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/app/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/app/vendor/league/event" />
+      <path value="$PROJECT_DIR$/app/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/app/vendor/nyholm/psr7" />
     </include_path>
   </component>
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="Socket" port="9000" />
@@ -225,7 +255,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.php.debug.xdebug.proxy" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -243,6 +273,32 @@
       <recent name="$PROJECT_DIR$/app/resources/views/admin/layouts" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://rosinfra.lc" />
+          <option name="urlPath" value="api/project/index" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="PHP Web Page.test">
     <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8200">
@@ -392,7 +448,9 @@
       <workItem from="1602620939022" duration="1017000" />
       <workItem from="1602739765654" duration="2714000" />
       <workItem from="1602791412098" duration="2311000" />
-      <workItem from="1602825209766" duration="678000" />
+      <workItem from="1602825209766" duration="4296000" />
+      <workItem from="1602876593076" duration="4717000" />
+      <workItem from="1602912662231" duration="664000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -611,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602571427623</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add network auth">
+      <created>1602826058920</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1602826058920</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +729,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="redact form blades" />
     <MESSAGE value="add phones" />
     <MESSAGE value="add phones auth" />
     <MESSAGE value="add admin adverts" />
@@ -689,7 +753,8 @@
     <MESSAGE value="Redact payments service add local payment" />
     <MESSAGE value="redact search index" />
     <MESSAGE value="Move User entities in user folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move User entities in user folder" />
+    <MESSAGE value="add network auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="add network auth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2467" y="165" key="#CLI_Interpreters" timestamp="1601729819830">
@@ -722,10 +787,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2634" y="310" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601067082586" />
-    <state x="2344" y="0" width="752" height="1026" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601701405414">
+    <state x="2344" y="0" width="752" height="1026" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602877596564">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2344" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601701405414" />
+    <state x="2344" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602877596564" />
     <state x="2344" y="0" width="752" height="1026" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1598991412217" />
     <state x="2617" y="265" width="526" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602484077918">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -743,11 +808,11 @@
     </state>
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602622006875" />
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600025125354" />
-    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2" timestamp="1602622183921">
+    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2" timestamp="1602826057143">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="575" y="64" width="769" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601533785623" />
-    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602622183921" />
+    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602826057143" />
     <state x="575" y="64" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508969569" />
     <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361378500" />
     <state x="2112" y="60" key="DiffContextDialog" timestamp="1601068369762">
@@ -758,10 +823,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2725" y="407" key="DockerComposeFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597643830689" />
-    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl" timestamp="1602742907894">
+    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl" timestamp="1602830352542">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602742907894" />
+    <state x="642" y="196" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1602826313387" />
+    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602830352542" />
     <state x="747" y="252" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508262021" />
     <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361433874" />
     <state width="1641" height="479" key="GridCell.Tab.0.bottom" timestamp="1602569930402">
@@ -820,10 +886,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1872" height="463" key="GridCell.Tab.2.right/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
-    <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog" timestamp="1602484057881">
+    <state x="3042" y="194" width="734" height="565" key="NewPhpClassDialog" timestamp="1602880892663">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602484057881" />
+    <state x="3042" y="194" width="734" height="565" key="NewPhpClassDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602880892663" />
     <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601324573342" />
     <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1602439804883">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -831,17 +897,17 @@
     <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602439804883" />
     <state x="784" y="411" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1600889552739" />
     <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601110913650" />
-    <state x="2650" y="190" key="SettingsEditor" timestamp="1601893938258">
+    <state x="2650" y="190" key="SettingsEditor" timestamp="1602826188613">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2650" y="190" key="SettingsEditor/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601893938258" />
+    <state x="2650" y="190" key="SettingsEditor/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602826188613" />
     <state x="468" y="135" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508283576" />
     <state x="2388" y="142" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600437316401" />
-    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1602622192873">
+    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1602826061957">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601533788641" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602622192873" />
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602826061957" />
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599509022409" />
     <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361390488" />
     <state x="2740" y="420" key="WebDeployment.AddServerDialog.v.1" timestamp="1597865371456">
