@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Services\Sms\SmsRu;
 use App\Services\Sms\SmsSender;
 use Illuminate\Contracts\Foundation\Application;
+use Laravel\Passport\Passport;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,5 +22,6 @@ class AppServiceProvider extends ServiceProvider
             $config = $app->make('config')->get('banner');
             return new CostCalculator($config['price']);
         });
+        Passport::ignoreMigrations();
     }
 }

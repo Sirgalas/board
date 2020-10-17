@@ -10,7 +10,9 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/davejamesmiller/laravel-breadcrumbs" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/defuse/php-encryption" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/lexer" />
@@ -24,6 +26,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facade/ignition-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/firebase/php-jwt" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fruitcake/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/guzzle" />
@@ -31,29 +34,38 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/kalnoy/nestedset" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-diactoros" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-zendframework-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/installer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/passport" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravelcollective/html" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/lcobucci/jwt" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/event" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/mime-type-detection" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth1-client" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth2-server" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/nyholm/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/opis/closure" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/php-http/message-factory" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpdocumentor/type-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpseclib/phpseclib" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpunit/php-file-iterator" />
@@ -65,6 +77,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/simple-cache" />
@@ -108,6 +121,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php80" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/psr-http-message-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/service-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/string" />
@@ -115,11 +129,13 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/translation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/zircote/swagger-php" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

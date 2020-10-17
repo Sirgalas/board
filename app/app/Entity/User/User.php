@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
+use Laravel\Passport\HasApiTokens;
 
 /**
  * App\Entity\User
@@ -64,7 +65,7 @@ use Illuminate\Database\Eloquent\Builder;
  */
 class User extends Authenticatable
 {
-    use Notifiable;
+    use HasApiTokens, Notifiable;
 
     const PHONE_TOKEN_EXPIRE=300;
 
@@ -347,5 +348,10 @@ class User extends Authenticatable
         return $query->whereHas('networks', function(Builder $query) use ($network, $identity) {
             $query->where('network', $network)->where('identity', $identity);
         });
+    }
+
+    public function findForPassport($identifier)
+    {
+        return self::where('email', $identifier)->where('status', self::STATUS_ACTIVE)->first();
     }
 }

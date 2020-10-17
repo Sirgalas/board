@@ -24,6 +24,12 @@ class RegisterService
         $this->dispatcher=$dispatcher;
     }
 
+    public function register(RegisterRequest $request):void
+    {
+        $user=User::register($request);
+        $this->mailer->to($user->email)->send(new VerifyMail($user));
+        $this->dispatcher->dispatch(new Registered($user));
+    }
 
     public function create(RegisterRequest $request ):void
     {
