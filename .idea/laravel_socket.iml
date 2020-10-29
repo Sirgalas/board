@@ -21,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/elasticsearch/elasticsearch" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/ezimuel/guzzlestreams" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/ezimuel/ringphp" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/ezyang/htmlpurifier" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/facade/ignition-contracts" />
@@ -49,6 +50,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/mime-type-detection" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth1-client" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth2-server" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/mews/purifier" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/myclabs/deep-copy" />

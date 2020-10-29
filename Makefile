@@ -94,5 +94,8 @@ create_request: # create request name=[seederName]
 create_command: # create command name=[seederName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:command $(name)Command
 
+api_doc: # create command name=[seederName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan api:doc
+
 ide_helpers: # create ide helpers
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan ide-helper:$(name)

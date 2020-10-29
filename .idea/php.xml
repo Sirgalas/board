@@ -147,6 +147,8 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/annotations" />
       <path value="$PROJECT_DIR$/app/vendor/zircote/swagger-php" />
+      <path value="$PROJECT_DIR$/app/vendor/mews/purifier" />
+      <path value="$PROJECT_DIR$/app/vendor/ezyang/htmlpurifier" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
