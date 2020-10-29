@@ -27,7 +27,7 @@ class RegisterService
     public function register(RegisterRequest $request):void
     {
         $user=User::register($request);
-        $this->mailer->to($user->email)->send(new VerifyMail($user));
+        //$this->mailer->to($user->email)->send(new VerifyMail($user));
         $this->dispatcher->dispatch(new Registered($user));
     }
 

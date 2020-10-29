@@ -56,3 +56,8 @@
             <span>Баннер</span></a>
     </li>
 @endcan
+@can ('manage-pages')
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.pages.index') }}">Pages</a>
+    </li>
+@endcan

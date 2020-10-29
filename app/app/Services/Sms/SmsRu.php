@@ -15,7 +15,8 @@ class SmsRu implements SmsSender
     public function __construct($appId,$url='https://sms.ru/sms/send')
     {
         if(empty($appId)){
-            throw new \InvalidArgumentException('Sms appId must be set.');
+            $this->client=null;
+            //throw new \InvalidArgumentException('Sms appId must be set.');
         }
         $this->appId=$appId;
         $this->url=$url;

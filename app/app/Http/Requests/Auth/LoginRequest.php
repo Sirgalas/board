@@ -25,3 +25,16 @@ class LoginRequest extends FormRequest
         ];
     }
 }
+/**
+ * @OA\Schema(
+ *    schema="LoginRequest",
+ *    @OA\Property(
+ *        property="email",
+ *        type="string"
+ *    ),
+ *    @OA\Property(
+ *        property="password",
+ *        type="string"
+ *    )
+ * )
+ */

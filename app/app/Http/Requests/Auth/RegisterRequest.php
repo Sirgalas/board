@@ -27,3 +27,24 @@ class RegisterRequest extends FormRequest
         ];
     }
 }
+/**
+ * @OA\Schema(
+ *    schema="RegisterRequest",
+ *    @OA\Property(
+ *        property="name",
+ *        type="string"
+ *    ),
+ *    @OA\Property(
+ *        property="email",
+ *        type="string"
+ *    ),
+ *    @OA\Property(
+ *        property="password",
+ *        type="string"
+ *    ),
+ *    @OA\Property(
+ *        property="password_confirmation",
+ *        type="string"
+ *    )
+ * )
+ */

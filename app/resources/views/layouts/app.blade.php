@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Adverts</title>
-
+    @yield('meta')
     <!-- Styles -->
     <link href="{{ mix('css/app.css', 'build') }}" rel="stylesheet">
 </head>
@@ -67,11 +67,8 @@
             @include('layouts.partials.search', ['category' => null, 'route' => 'adverts.index'])
         @show
     </header>
-
     <main class="app-content py-3">
         <div class="container">
-
-
             @include('layouts.partials.flash')
             @yield('content')
         </div>
@@ -87,5 +84,6 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js', 'build') }}"></script>
+    @yield('scripts')
 </body>
 </html>

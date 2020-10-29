@@ -29,10 +29,17 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="price" class="col-form-label">Price</label>
-                            {{Form::text('price',old('price'),['class'=>$errors->has('price')?"form-control is_invalid":"form-control","required"=>true])}}
-                            @if ($errors->has('price'))
-                                <span class="invalid-feedback"><strong>{{ $errors->first('price') }}</strong></span>
-                            @endif
+                            <div class="row">
+                                <div class="col-md-11">
+                                    {{Form::text('price',old('price'),['class'=>$errors->has('price')?"form-control is_invalid":"form-control","required"=>true])}}
+                                    @if ($errors->has('price'))
+                                        <span class="invalid-feedback"><strong>{{ $errors->first('price') }}</strong></span>
+                                    @endif
+                                </div>
+                                <div class="col-md-1">
+                                    <span class="btn btn-primary btn-block location-button" data-target="#address" data-key="@env(GEO_CODE)"><span class="fa fa-location-arrow"></span></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

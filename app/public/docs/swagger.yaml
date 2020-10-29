@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: 'This api full project in Rosinfra sercvice'
+  contact:
+    email: support@example.com
+  version: 1.0.0
+paths:
+  /api/project/index:
+    get:
+      operationId: 'frontend\modules\Api\controllers\ProjectController::actionIndex'
+      parameters:
+        -
+          name: name
+          in: path
+          description: 'name project'
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'An example resource'
