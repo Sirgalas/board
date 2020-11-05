@@ -2,19 +2,16 @@
 <li class="nav-item active">
     <a class="nav-link" href="{{ route('admin.home') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <span>Панель</span></a>
 </li>
 <!-- Divider -->
 <hr class="sidebar-divider">
-<!-- Heading -->
-<div class="sidebar-heading">
-    Pages
-</div>
+
 @can ('manage-users')
 <!-- Nav Item - Tables -->
 <li class="nav-item">
     <a class="nav-link" href="{{ route('admin.users.index') }}">
-        <i class="fas fa-fw fa-table"></i>
+        <i class="fas fa-fw fa-user"></i>
         <span>Пользователи</span></a>
 </li>
 @endcan
@@ -22,7 +19,7 @@
 <!-- Nav Item - Tables -->
 <li class="nav-item">
     <a class="nav-link" href="{{ route('admin.regions.index') }}">
-        <i class="fas fa-fw fa-table"></i>
+        <i class="fas fa-fw fa-map-marked"></i>
         <span>Регион</span></a>
 </li>
 @endcan
@@ -37,7 +34,7 @@
 @can ('manage-adverts')
 <li class="nav-item">
     <a class="nav-link collapsed" href="{{ route('admin.adverts.adverts.index') }}" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-        <i class="fas fa-fw fa-folder"></i>
+        <i class="fas fa-fw fa-book-reader"></i>
         <span>Объявления</span>
     </a>
     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -52,12 +49,24 @@
 @can ('manage-banners')
     <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.banners.index') }}">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Баннер</span></a>
+            <i class="fas fa-fw fa-bookmark"></i>
+            <span>Баннер</span>
+        </a>
     </li>
 @endcan
 @can ('manage-pages')
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('admin.pages.index') }}">Pages</a>
+        <a class="nav-link" href="{{ route('admin.pages.index') }}">
+            <i class="fas fa-fw fa-sticky-note"></i>
+            <span>Страницы</span>
+        </a>
+    </li>
+@endcan
+@can ('manage-tickets')
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.tickets.index') }}">
+            <i class="fas fa-fw fa-clipboard-list"></i>
+            <span>Обратная связь</span>
+        </a>
     </li>
 @endcan

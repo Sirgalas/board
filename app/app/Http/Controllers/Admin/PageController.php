@@ -38,7 +38,6 @@ class PageController extends Controller
             'content' => $request->content,
             'description' => $request->description,
         ]);
-
         return redirect()->route('admin.pages.show', $page);
     }
 

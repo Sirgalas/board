@@ -3,7 +3,7 @@
 use App\Providers\SmsServiceProvider;
 use App\Providers\CacheServiceProvider;
 use App\Providers\SearchServiceProvider;
-
+use App\Providers\ComposerServiceProvider;
 return [
 
     /*
@@ -166,6 +166,7 @@ return [
         SmsServiceProvider::class,
         CacheServiceProvider::class,
         SearchServiceProvider::class,
+        ComposerServiceProvider::class,
     ],
 
     /*

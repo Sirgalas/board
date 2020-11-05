@@ -2,13 +2,12 @@
 
 @section('content')
 
-    {{Form::open(['route'=>(['admin.pages.store']),'method'=>'POST'])}}
-        {{Form::token()}}
+    {{Form::open(['route'=>(['admin.pages.update', $page])])}}
         @method('PUT')
 
         <div class="form-group">
             <label for="title" class="col-form-label">Title</label>
-            {{Form::text('title',old('title'),['class'=>$errors->has('title')?'form-control is-invalid':'form-control','required'=>true])}}
+            {{Form::text('title',old('title',$page->title),['class'=>$errors->has('title')?'form-control is-invalid':'form-control','required'=>true])}}
             @if ($errors->has('title'))
                 <span class="invalid-feedback"><strong>{{ $errors->first('title') }}</strong></span>
             @endif
@@ -16,7 +15,7 @@
 
         <div class="form-group">
             <label for="menu_title" class="col-form-label">Title</label>
-            {{Form::text('menu-title',old('menu-title'),['class'=>$errors->has('menu-title')?'form-control is-invalid':'form-control','required'=>true])}}
+            {{Form::text('menu_title',old('menu_title',$page->menu_title),['class'=>$errors->has('menu-title')?'form-control is-invalid':'form-control','required'=>true])}}
             @if ($errors->has('menu_title'))
                 <span class="invalid-feedback"><strong>{{ $errors->first('menu_title') }}</strong></span>
             @endif
@@ -24,7 +23,7 @@
 
         <div class="form-group">
             <label for="slug" class="col-form-label">Slug</label>
-            {{Form::text('slug',old('slug'),['class'=>$errors->has('slug')?'form-control is-invalid':'form-control','required'=>true])}}
+            {{Form::text('slug',old('slug',$page->slug),['class'=>$errors->has('slug')?'form-control is-invalid':'form-control','required'=>true])}}
             @if ($errors->has('slug'))
                 <span class="invalid-feedback"><strong>{{ $errors->first('slug') }}</strong></span>
             @endif
@@ -48,14 +47,14 @@
 
         <div class="form-group">
             <label for="content" class="col-form-label">Content</label>
-            {{Form::textarea('content',old('content') ,['class'=>$errors->has('content') ?"form-control is-invalid":"form-control",'required'=>true,'rows'=>10])}}            @if ($errors->has('content'))
+            {{Form::textarea('content',old('content',$page->content) ,['class'=>$errors->has('content') ?"form-control is-invalid  summernote":"form-control  summernote",'required'=>true,'rows'=>10,"data-image-url"=> route('admin.ajax.upload.image') ])}}            @if ($errors->has('content'))
                 <span class="invalid-feedback"><strong>{{ $errors->first('content') }}</strong></span>
             @endif
         </div>
 
         <div class="form-group">
             <label for="description" class="col-form-label">Description</label>
-            {{Form::textarea('description',old('description') ,['class'=>$errors->has('description') ?"form-control is-invalid":"form-control",'required'=>true,'rows'=>10])}}
+            {{Form::textarea('description',old('description',$page->description) ,['class'=>$errors->has('description') ?"form-control is-invalid":"form-control",'required'=>true,'rows'=>10])}}
             @if ($errors->has('description'))
                 <span class="invalid-feedback"><strong>{{ $errors->first('description') }}</strong></span>
             @endif

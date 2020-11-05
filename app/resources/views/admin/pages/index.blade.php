@@ -25,19 +25,21 @@
                     <div class="d-flex flex-row">
                         {{Form::open(['route'=>(['admin.pages.store', $page]),'method'=>'POST','class'=>'mr-1'])}}
                             {{Form::token()}}
-                            {{Form::submit('<span class="fa fa-angle-double-up"></span>',['class'=>'btn btn-sm btn-outline-primary'])}}
+                            <button type="submit" class='btn btn-sm btn-outline-primary'><span class="fa fa-double-angle-up"></span></button>
                         {{Form::close()}}
                         {{Form::open(['route'=>(['admin.pages.up', $page]),'method'=>'POST','class'=>'mr-1'])}}
                             {{Form::token()}}
-                            {{Form::submit('<span class="fa fa-angle-up"></span>',['class'=>'btn btn-sm btn-outline-primary'])}}
+
+                            <button type="submit" class='btn btn-sm btn-outline-primary'><span class="fa fa-angle-up"></span></button>
                         {{Form::close()}}
                         {{Form::open(['route'=>(['admin.pages.up', $page]),'method'=>'POST','class'=>'mr-1'])}}
                             {{Form::token()}}
-                            {{Form::submit('<span class="fa fa-angle-down"></span>',['class'=>'btn btn-sm btn-outline-primary'])}}
+                            <button type="submit" class='btn btn-sm btn-outline-primary'><span class="fa fa-angle-down"></span></button>
+
                         {{Form::close()}}
                         {{Form::open(['route'=>(['admin.pages.last', $page]),'method'=>'POST','class'=>'mr-1'])}}
                             {{Form::token()}}
-                            {{Form::submit('<span class="fa fa-angle-down"></span>',['class'=>'btn btn-sm btn-outline-primary'])}}
+                            <button type="submit" class='btn btn-sm btn-outline-primary'><span class="fa fa-double-angle-down"></span></button>
                         {{Form::close()}}
                     </div>
                 </td>

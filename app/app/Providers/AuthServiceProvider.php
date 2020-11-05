@@ -8,6 +8,7 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use App\Entity\Adverts\Advert\Advert;
 use App\Entity\Banner\Banner;
 use Laravel\Passport\Passport;
+use App\Entity\Ticket\Ticket;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -42,6 +43,10 @@ class AuthServiceProvider extends ServiceProvider
             return $user->isAdmin() || $user->isModerator();
         });
 
+        Gate::define('manage-tickets', function (User $user) {
+            return $user->isAdmin() || $user->isModerator();
+        });
+
         Gate::define('manage-regions', function (User $user) {
             return $user->isAdmin();
         });
@@ -68,6 +73,10 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::define('manage-own-banner', function (User $user, Banner $banner) {
             return $banner->user_id === $user->id;
+        });
+
+        Gate::define('manage-own-ticket', function (User $user, Ticket $ticket) {
+            return $ticket->user_id === $user->id;
         });
     }
 

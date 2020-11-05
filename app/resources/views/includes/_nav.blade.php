@@ -14,4 +14,5 @@
     <li class="nav-item">
         <a class="nav-link{{$page==='profile'?' active':''}}" href="{{ route('cabinet.profile.home') }}">Profile</a>
     </li>
+    <li class="nav-item{{$page==='ticked'?' active':''}}"><a class="nav-link" href="{{ route('cabinet.tickets.index') }}">Tickets</a></li>
 </ul>

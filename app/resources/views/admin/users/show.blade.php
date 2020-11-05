@@ -20,7 +20,7 @@
             <div class="col-2">
                 <a href="{{ route('admin.users.edit', $user) }}" class="btn btn-primary mr-1">Edit</a>
                 @if ($user->isWait())
-                    {{Form::open(['route'=>['admin.users.verifye', $user],'class'=>"mr-1",'method'=>'post'])}}
+                    {{Form::open(['route'=>['admin.users.verify', $user],'class'=>"mr-1",'method'=>'post'])}}
                     @csrf
                         {{Form::submit('Подтвердить',["class"=>"btn btn-success"])}}
                     {{Form::close()}}

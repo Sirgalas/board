@@ -37,13 +37,13 @@ Route::group(['as' => 'api.', 'namespace' => 'Api'],
                     Route::get('/favorites', 'FavoriteController@index');
                     Route::delete('/favorites/{advert}', 'FavoriteController@remove');
 
-                    Route::resource('adverts', 'AdvertController')->only('index', 'show', 'update', 'destroy');
-                    Route::post('/adverts/create/{category}/{region?}', 'AdvertController@store');
+                    Route::resource('adverts', 'AdvertsController')->only('index', 'show', 'update', 'destroy');
+                    Route::post('/adverts/create/{category}/{region?}', 'AdvertsController@store');
 
-                    Route::put('/adverts/{advert}/photos', 'AdvertController@photos');
-                    Route::put('/adverts/{advert}/attributes', 'AdvertController@attributes');
-                    Route::post('/adverts/{advert}/send', 'AdvertController@send');
-                    Route::post('/adverts/{advert}/close', 'AdvertController@close');
+                    Route::put('/adverts/{advert}/photos', 'AdvertsController@photos');
+                    Route::put('/adverts/{advert}/attributes', 'AdvertsController@attributes');
+                    Route::post('/adverts/{advert}/send', 'AdvertsController@send');
+                    Route::post('/adverts/{advert}/close', 'AdvertsController@close');
                 }
             );
         });

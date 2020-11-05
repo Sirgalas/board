@@ -28,7 +28,6 @@ class UsersController extends Controller
 
     public function index(SearchRequest $request)
     {
-
         $users = $this->search->search($request);
         return view('admin.users.index', [
             'users'=>$users,

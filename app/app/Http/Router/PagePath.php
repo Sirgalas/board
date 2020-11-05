@@ -26,8 +26,8 @@ class PagePath implements UrlRoutable
         if (!$this->page) {
             throw new \BadMethodCallException('Empty page.');
         }
-
         return Cache::tags(Page::class)->rememberForever('page_path_' . $this->page->id, function () {
+
             return $this->page->getPath();
         });
     }
@@ -36,7 +36,6 @@ class PagePath implements UrlRoutable
     {
         return 'page_path';
     }
-
     public function resolveRouteBinding($value,$field = null)
     {
         $chunks = explode('/', $value);
@@ -58,4 +57,6 @@ class PagePath implements UrlRoutable
         return $this
             ->withPage($page);
     }
+
+    public function resolveChildRouteBinding($childType, $value, $field){}
 }

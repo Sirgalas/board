@@ -12,24 +12,23 @@ class UserSearch
     public function search(SearchRequest $request){
         $query = User::orderByDesc('id');
 
-        if (!empty($value = $request->id)) {
-            $query->where('id', $value);
+        if (!empty($request->id)) {
+            $query->where('id', $request->id);
         }
 
-        if (!empty($value = $request->name)) {
-            $query->where('name', 'like', '%' . $value . '%');
+        if (!empty($request->name)) {
+            $query->where('name', 'like', '%' . $request->name. '%');
+        }
+        if (!empty($request->email)) {
+            $query->where('email', 'like', '%' . $request->email . '%');
         }
 
-        if (!empty($value = $request->email)) {
-            $query->where('email', 'like', '%' . $value . '%');
+        if (!empty($request->status)) {
+            $query->where('status', $request->status);
         }
 
-        if (!empty($value = $request->status)) {
-            $query->where('status', $value);
-        }
-
-        if (!empty($value = $request->role)) {
-            $query->where('role', $value);
+        if (!empty($request->role)) {
+            $query->where('role', $request->role);
         }
         return $query->paginate(20);
     }

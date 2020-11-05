@@ -19,8 +19,8 @@ class CreatePagesTable extends Migration
             $table->string('title');
             $table->string('menu_title')->nullable();
             $table->string('slug');
-            $table->string('content');
-            $table->string('description')->nullable();
+            $table->text('content');
+            $table->text('description')->nullable();
             $table->timestamps();
             NestedSet::columns($table);
         });

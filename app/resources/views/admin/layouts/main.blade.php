@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-
     @include('admin.includes.head')
-
 </head>
 
 <body id="page-top">
@@ -23,7 +21,7 @@
         <div id="content">
 
             <!-- Topbar -->
-        @include('admin.includes.topbar')
+        @include('admin.includes.topbar',['ticket'=>$menuTicket])
         <!-- End of Topbar -->
             @section('breadcrumbs', Breadcrumbs::render())
             @yield('breadcrumbs')
@@ -50,7 +48,7 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
-@include('admin.includes.footer-script')
+<script src="{{ mix('js/app.js', 'build') }}"></script>
 
 </body>
 

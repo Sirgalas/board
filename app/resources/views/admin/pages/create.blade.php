@@ -2,9 +2,6 @@
 
 @section('content')
     {{Form::open(['route'=>(['admin.pages.store']),'method'=>'POST'])}}
-        {{Form::token()}}
-
-        @csrf
 
         <div class="form-group">
             <label for="title" class="col-form-label">Title</label>
@@ -16,7 +13,7 @@
 
         <div class="form-group">
             <label for="menu_title" class="col-form-label">Title</label>
-            {{Form::text('menu-title',old('menu-title'),['class'=>$errors->has('menu-title')?'form-control is-invalid':'form-control','required'=>true])}}
+            {{Form::text('menu_title',old('menu-title'),['class'=>$errors->has('menu_title')?'form-control is-invalid':'form-control','required'=>true])}}
             @if ($errors->has('menu_title'))
                 <span class="invalid-feedback"><strong>{{ $errors->first('menu_title') }}</strong></span>
             @endif
@@ -48,7 +45,7 @@
 
         <div class="form-group">
             <label for="content" class="col-form-label">Content</label>
-            {{Form::textarea('content',old('content') ,['class'=>$errors->has('content') ?"form-control summernote is-invalid":"form-control summernote",'required'=>true,'rows'=>10])}}
+            {{Form::textarea('content',old('content') ,['class'=>$errors->has('content') ?"form-control summernote is-invalid":"form-control summernote",'required'=>true,'rows'=>10,"data-image-url"=>route('admin.ajax.upload.image') ])}}
             @if ($errors->has('content'))
                 <span class="invalid-feedback"><strong>{{ $errors->first('content') }}</strong></span>
             @endif
