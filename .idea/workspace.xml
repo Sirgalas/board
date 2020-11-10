@@ -26,12 +26,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Dialog/Dialog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Dialog/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_11_08_185208_create_dialogs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/migrations/2020_11_08_185231_create_messages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Notifications/Advert/ModerationPassedNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Notifications/SmsChannel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Entity/Adverts/Advert/Advert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Admin/UploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/UseCases/Banner/BannerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/UseCases/Banner/BannerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/admin/banners/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/admin/banners/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/banner/get.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/banner/get.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/cabinet/banners/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/cabinet/banners/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +55,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/app" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -746,7 +752,12 @@
       <workItem from="1604603182162" duration="9479000" />
       <workItem from="1604681142172" duration="1796000" />
       <workItem from="1604840879803" duration="62000" />
-      <workItem from="1604860944370" duration="2096000" />
+      <workItem from="1604860944370" duration="2686000" />
+      <workItem from="1604899624076" duration="1708000" />
+      <workItem from="1604907663948" duration="1350000" />
+      <workItem from="1604955983777" duration="660000" />
+      <workItem from="1604985316658" duration="1962000" />
+      <workItem from="1605038382189" duration="2590000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -1000,7 +1011,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604612924478</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="add dialogs">
+      <created>1604863058350</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1604863058350</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1053,7 +1071,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add route model" />
     <MESSAGE value="add relation model" />
     <MESSAGE value="soft redact" />
     <MESSAGE value="redact errors  in adverts create" />
@@ -1078,7 +1095,8 @@
     <MESSAGE value="add api and swagger" />
     <MESSAGE value="add page and add redact page" />
     <MESSAGE value="redact page add ticket redact sb admin 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="redact page add ticket redact sb admin 2" />
+    <MESSAGE value="add dialogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dialogs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2467" y="165" key="#CLI_Interpreters" timestamp="1601729819830">
@@ -1132,11 +1150,11 @@
     </state>
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602622006875" />
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600025125354" />
-    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2" timestamp="1604612915524">
+    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2" timestamp="1604863057679">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="575" y="64" width="769" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601533785623" />
-    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604612915524" />
+    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604863057679" />
     <state x="575" y="64" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508969569" />
     <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361378500" />
     <state x="2112" y="60" key="DiffContextDialog" timestamp="1601068369762">
@@ -1147,11 +1165,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2725" y="407" key="DockerComposeFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597643830689" />
-    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl" timestamp="1604840913937">
+    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl" timestamp="1604987911087">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="642" y="196" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1603434063292" />
-    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604840913937" />
+    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604987911087" />
     <state x="747" y="252" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508262021" />
     <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361433874" />
     <state width="1641" height="243" key="GridCell.Tab.0.bottom" timestamp="1604255471147">
@@ -1210,10 +1228,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1872" height="463" key="GridCell.Tab.2.right/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601900463834" />
-    <state x="3042" y="194" width="734" height="565" key="NewPhpClassDialog" timestamp="1604608813491">
+    <state x="3042" y="194" width="734" height="565" key="NewPhpClassDialog" timestamp="1604987193869">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3042" y="194" width="734" height="565" key="NewPhpClassDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604608813491" />
+    <state x="3042" y="194" width="734" height="565" key="NewPhpClassDialog/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604987193869" />
     <state x="3042" y="194" width="650" height="565" key="NewPhpClassDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601324573342" />
     <state x="2704" y="433" width="351" height="160" key="NewPhpFileDialog" timestamp="1604500604569">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -1227,11 +1245,11 @@
     <state x="2650" y="190" key="SettingsEditor/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602826188613" />
     <state x="468" y="135" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508283576" />
     <state x="2388" y="142" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600437316401" />
-    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1604612926986">
+    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1604863060106">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601533788641" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604612926986" />
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604863060106" />
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599509022409" />
     <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361390488" />
     <state x="2740" y="420" key="WebDeployment.AddServerDialog.v.1" timestamp="1597865371456">

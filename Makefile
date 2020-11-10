@@ -67,6 +67,11 @@ composer_update: # composer dump-autoload
 test: # run all tests
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php vendor/bin/phpunit
 
+queue-work: # create controller name=[controllerName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan queue:work
+queue-listen: # create controller name=[controllerName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan queue:listen
+
 create_controller: # create controller name=[controllerName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:controller $(name)Controller
 
@@ -88,6 +93,8 @@ create_test: # create test name=[testName]
 create_unit_test: # create test unit name=[seederName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:test $(name)Test --unit
 
+create_notification: # create test unit name=[seederName]
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:notifikation $(name)Notification
 create_request: # create request name=[seederName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:request $(name)Request
 
