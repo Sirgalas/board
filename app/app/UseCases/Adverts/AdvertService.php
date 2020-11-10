@@ -17,6 +17,7 @@ use App\Mail\Auth\VerifyMail;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use App\Notifications\Advert\ModerationPassedNotification;
 
 class AdvertService
 {
@@ -92,6 +93,7 @@ class AdvertService
     {
         $advert = $this->getAdvert($id);
         $advert->moderate(Carbon::now());
+        $advert->user->notify(new ModerationPassedNotification($advert));
     }
 
     public function reject($id, RejectRequest $request): void

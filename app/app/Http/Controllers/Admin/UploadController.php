@@ -14,6 +14,6 @@ class UploadController extends Controller
         ]);
 
         $file = $request->file('file');
-        return '/storage/' . $file->store('images', 'public');
+        return  $file->store('images');
     }
 }
