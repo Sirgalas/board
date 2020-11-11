@@ -2,25 +2,17 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Event;
+use App\Events\Advert\ModerationPassed;
+use App\Listeners\Advert\AdvertChangedListener;
+use App\Listeners\Advert\ModerationPassedListener;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 class EventServiceProvider extends ServiceProvider
 {
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+        ModerationPassed::class => [
+            ModerationPassedListener::class,
+            AdvertChangedListener::class,
         ],
-        'App\Events\Adverts\Create'=>[
-            'App\Listener\Adverts\CreateListener'
-        ],
-        'App\Events\Adverts\Remove'=>[
-            'App\Listener\Adverts\RemoveListener'
-        ]
     ];
-
-    public function boot()
-    {
-        parent::boot();
-    }
 }

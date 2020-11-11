@@ -6,6 +6,7 @@ namespace App\UseCases\Adverts;
 
 use App\Entity\Adverts\Category;
 use App\Entity\Region;
+use App\Events\Advert\ModerationPassed;
 use App\Http\Requests\Adverts\AttributesRequest;
 use App\Http\Requests\Adverts\CreateRequest;
 use App\Entity\User\User;
@@ -17,7 +18,6 @@ use App\Mail\Auth\VerifyMail;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
-use App\Notifications\Advert\ModerationPassedNotification;
 
 class AdvertService
 {
@@ -93,7 +93,7 @@ class AdvertService
     {
         $advert = $this->getAdvert($id);
         $advert->moderate(Carbon::now());
-        $advert->user->notify(new ModerationPassedNotification($advert));
+        event(new ModerationPassed($advert));
     }
 
     public function reject($id, RejectRequest $request): void
