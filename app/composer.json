@@ -14,6 +14,7 @@
         "guzzlehttp/guzzle": "^7.0",
         "kalnoy/nestedset": "^5.0",
         "laravel/framework": "^7.0",
+        "laravel/horizon": "^4.3",
         "laravel/installer": "^3.1",
         "laravel/passport": "^9.3",
         "laravel/socialite": "^5.0",

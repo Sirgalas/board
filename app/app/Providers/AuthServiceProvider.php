@@ -9,6 +9,7 @@ use App\Entity\Adverts\Advert\Advert;
 use App\Entity\Banner\Banner;
 use Laravel\Passport\Passport;
 use App\Entity\Ticket\Ticket;
+use Laravel\Horizon\Horizon;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -22,10 +23,17 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPermissions();
 
         Passport::routes();
+        Horizon::auth(function () {
+            return Gate::allows('horizon');
+        });
     }
 
     private function registerPermissions(): void
     {
+
+        Gate::define('horizon', function (User $user) {
+            return $user->isAdmin() || $user->isModerator();
+        });
 
         Gate::define('admin-panel', function (User $user) {
             return $user->isAdmin()||$user->isModerator();
