@@ -67,10 +67,22 @@ composer_update: # composer dump-autoload
 test: # run all tests
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php vendor/bin/phpunit
 
-queue-work: # create controller name=[controllerName]
+queue-work: #  start queue
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan queue:work
-queue-listen: # create controller name=[controllerName]
+queue-listen: # listen queue
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan queue:listen
+
+horizon: #  start queue
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan horizon
+
+horizon-pause: #  start queue
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan horizon:pause
+
+horizon-continue: #  start queue
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan horizon:continue
+
+horizon-terminate: #  start queue
+	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan horizon:terminate
 
 create_controller: # create controller name=[controllerName]
 	@docker-compose -f ${DOCKER_CONFIG} exec -u www -w /www/app php-fpm php artisan make:controller $(name)Controller

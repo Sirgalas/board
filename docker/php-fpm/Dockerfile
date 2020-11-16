@@ -41,7 +41,8 @@ RUN docker-php-ext-configure gd \
 			--with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install -j$(nproc) \
 			gd \
-			bcmath
+			bcmath\
+			pcntl
 RUN pecl install xdebug-2.7.1 \
 && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
 && docker-php-ext-enable xdebug

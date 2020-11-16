@@ -26,12 +26,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864edacb-9b94-4c38-903b-ed940b7367fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/Events/Advert/ModerationPassed.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Listeners/Advert/AdvertChangedListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/Listeners/Advert/ModerationPassedListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Jobs/Advert/ReindexAdvert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/horizon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel_socket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_socket.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/UseCases/Adverts/AdvertService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/.phpstorm.meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/_ide_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Listeners/Advert/AdvertChangedListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Listeners/Advert/AdvertChangedListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/redis/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/redis/dump.rdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +56,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/app" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -213,6 +220,8 @@
       <path value="$PROJECT_DIR$/app/vendor/zircote/swagger-php" />
       <path value="$PROJECT_DIR$/app/vendor/mews/purifier" />
       <path value="$PROJECT_DIR$/app/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/app/vendor/laravel/horizon" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/chronos" />
     </include_path>
   </component>
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="Socket" port="9000" />
@@ -753,7 +762,11 @@
       <workItem from="1604985316658" duration="1962000" />
       <workItem from="1605038382189" duration="2864000" />
       <workItem from="1605071288655" duration="974000" />
-      <workItem from="1605117994408" duration="1685000" />
+      <workItem from="1605117994408" duration="1977000" />
+      <workItem from="1605158649955" duration="3307000" />
+      <workItem from="1605248759854" duration="51000" />
+      <workItem from="1605337013830" duration="2199000" />
+      <workItem from="1605503848388" duration="795000" />
     </task>
     <task id="LOCAL-00001" summary="add entities">
       <created>1597602930031</created>
@@ -1021,7 +1034,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605041189062</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="add events">
+      <created>1605120912139</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1605120912139</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1074,7 +1094,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="soft redact" />
     <MESSAGE value="redact errors  in adverts create" />
     <MESSAGE value="add phpredis and cache url" />
     <MESSAGE value="add favorites" />
@@ -1099,7 +1118,8 @@
     <MESSAGE value="redact page add ticket redact sb admin 2" />
     <MESSAGE value="add dialogs" />
     <MESSAGE value="add notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="add notification" />
+    <MESSAGE value="add events" />
+    <option name="LAST_COMMIT_MESSAGE" value="add events" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2467" y="165" key="#CLI_Interpreters" timestamp="1601729819830">
@@ -1153,11 +1173,11 @@
     </state>
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602622006875" />
     <state x="2659" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600025125354" />
-    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2" timestamp="1605041188477">
+    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2" timestamp="1605120911766">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="575" y="64" width="769" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601533785623" />
-    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605041188477" />
+    <state x="2399" y="227" width="850" height="853" key="CommitChangelistDialog2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605120911766" />
     <state x="575" y="64" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508969569" />
     <state x="2495" y="67" width="769" height="891" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361378500" />
     <state x="2112" y="60" key="DiffContextDialog" timestamp="1601068369762">
@@ -1168,11 +1188,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2725" y="407" key="DockerComposeFileDialog/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1597643830689" />
-    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl" timestamp="1605074683737">
+    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl" timestamp="1605162232409">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="642" y="196" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1603434063292" />
-    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605074683737" />
+    <state x="2562" y="206" width="426" height="496" key="FileChooserDialogImpl/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605162232409" />
     <state x="747" y="252" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508262021" />
     <state x="2667" y="265" width="426" height="496" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361433874" />
     <state width="1641" height="243" key="GridCell.Tab.0.bottom" timestamp="1604255471147">
@@ -1248,11 +1268,11 @@
     <state x="2650" y="190" key="SettingsEditor/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1602826188613" />
     <state x="468" y="135" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599508283576" />
     <state x="2388" y="142" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1600437316401" />
-    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1605041190991">
+    <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2" timestamp="1605120919891">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@0.0.1920.1026" timestamp="1601533788641" />
-    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605041190991" />
+    <state x="2479" y="243" key="Vcs.Push.Dialog.v2/0.0.1920.1026/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605120919891" />
     <state x="559" y="231" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@0.0.1920.1026" timestamp="1599509022409" />
     <state x="2479" y="243" width="803" height="540" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1026@1920.0.1920.1080" timestamp="1601361390488" />
     <state x="2740" y="420" key="WebDeployment.AddServerDialog.v.1" timestamp="1597865371456">

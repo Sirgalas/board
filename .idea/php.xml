@@ -149,6 +149,8 @@
       <path value="$PROJECT_DIR$/app/vendor/zircote/swagger-php" />
       <path value="$PROJECT_DIR$/app/vendor/mews/purifier" />
       <path value="$PROJECT_DIR$/app/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/app/vendor/laravel/horizon" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/chronos" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
